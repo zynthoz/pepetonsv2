@@ -62,18 +62,20 @@
   </section>
 
   <main>
+    <div class="menu-layout-wrapper">
+      <!-- Menu Filtering Tabs -->
+      <aside class="menu-sidebar">
+        <div class="menu-tabs">
+          <button class="menu-tab-btn active" data-filter="all">All Items</button>
+          <button class="menu-tab-btn" data-filter="starters">Grills & Starters</button>
+          <button class="menu-tab-btn" data-filter="soups">Soups & Vegetables</button>
+          <button class="menu-tab-btn" data-filter="rice-noodles">Rice & Noodles</button>
+          <button class="menu-tab-btn" data-filter="desserts">Desserts</button>
+        </div>
+      </aside>
 
-    <!-- Menu Filtering Tabs -->
-    <div class="menu-tabs">
-      <button class="menu-tab-btn active" data-filter="all">All Items</button>
-      <button class="menu-tab-btn" data-filter="starters">Grills & Starters</button>
-      <button class="menu-tab-btn" data-filter="soups">Soups & Vegetables</button>
-      <button class="menu-tab-btn" data-filter="rice-noodles">Rice & Noodles</button>
-      <button class="menu-tab-btn" data-filter="desserts">Desserts</button>
-    </div>
-
-    <!-- Menu Items Showcase -->
-    <div id="menuContainer">
+      <!-- Menu Items Showcase -->
+      <div id="menuContainer">
       
       <!-- Category: Grills & Starters (Pampaganang Pinoy) -->
       <div class="menu-section" id="starters">
@@ -355,6 +357,7 @@
       </div>
 
     </div>
+    </div> <!-- ends menu-layout-wrapper -->
 
     <!-- PDF Download Link CTA -->
     <div class="card" style="align-items: center; justify-content: center; text-align: center; background-color: var(--color-maroon-bg); margin-top: 48px;">
