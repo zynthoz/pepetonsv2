@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pepeton's Grill & Catering | Home | Filipino & Seafood in Quezon City</title>
+  <meta name="description" content="Welcome to Pepeton's Grill & Catering in Quezon City. Famous for Kapalmuks (crispy pork face), sisig, and grilled seafood. Order delivery or book private banquet and catering.">
+  
+  <!-- Google Fonts: Fredoka and Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" id="headerLogoLink">
+        <img src="assets/logo.png" alt="Pepeton's Logo">
+      </a>
+      
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="our-story.html">Our Story</a></li>
+        <li><a href="menu/restaurant.html">Restaurant Menu</a></li>
+        <li><a href="menu/catering.html">Catering Menu</a></li>
+        <li><a href="menu/party-food.html">Party Food</a></li>
+        <li><a href="kapalmuks.html">Kapalmuks</a></li>
+        <li><a href="banquet.html">Banquet</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="homeHero" style="margin-bottom: 64px;">
+      <div class="hero-content">
+        <span class="text-gold text-uppercase-label" style="font-size: 0.8rem;">Dine-In • Delivery • Catering</span>
+        <h1 class="text-gold" style="font-size: clamp(2.3rem, 5vw, 3.8rem); line-height: 1.1; margin: 12px 0 24px;">Authentic Filipino Grill & Seafood</h1>
+        <p class="hero-tagline" style="margin-bottom: 32px; font-size: 1.15rem; line-height: 1.6;">
+          Welcome to Pepeton's. We slow-cook, open-grill, and serve with family hospitality in the heart of Quezon City. Home of the famous crispy Kapalmuks platter.
+        </p>
+        
+        <div class="hero-actions" style="margin-bottom: 40px;">
+          <a href="menu/restaurant.html" class="btn btn-primary" id="heroBtnMenu">View Menu</a>
+          <a href="#homeQuickInquiry" class="btn btn-secondary" id="heroBtnCatering">Book Table / Event</a>
+        </div>
+        
+        <div class="hero-operating-info">
+          <div>
+            <strong class="text-gold text-uppercase-label">Address</strong>
+            <p>109 Mother Ignacia Ave, QC</p>
+          </div>
+          <div>
+            <strong class="text-gold text-uppercase-label">Hours</strong>
+            <p>10:00 AM - 10:00 PM Daily</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Double-Bezel Hero Image Shell -->
+      <div class="bezel-wrapper" style="width: 100%; height: 100%;">
+        <div class="image-placeholder" id="heroImagePlaceholder" style="height: 100%; min-height: 400px; background-color: #D96B27;"></div>
+      </div>
+    </section>
+
+    <!-- Asymmetrical Bento Feature Grid Section -->
+    <section id="homeBento" style="margin-bottom: 64px;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="text-gold text-uppercase-label">Curated Experience</span>
+        <h2 style="font-size: 2.5rem; margin-top: 8px;">Explore Pepeton's Offerings</h2>
+      </div>
+      
+      <div class="bento-grid">
+        <!-- Bento Cell 1: Spotlight on the famous Kapalmuks (spans 2 cols on desktop) -->
+        <div class="bezel-wrapper bento-col-2">
+          <div class="card bento-flex-mobile" style="flex-direction: row; gap: 32px; padding: 32px; background-color: var(--color-maroon-bg); display: flex;">
+            <div class="image-placeholder" style="width: 50%; min-height: 280px; background-color: #FFA64D;"></div>
+            <div style="width: 50%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
+              <span class="text-gold text-uppercase-label" style="font-size: 0.75rem;">Signature Masterpiece</span>
+              <h3 style="font-size: 1.8rem; margin: 12px 0; color: var(--color-price-white);">The Famous Kapalmuks</h3>
+              <p style="font-size: 0.95rem; margin-bottom: 24px; color: var(--color-body-cream); line-height: 1.5;">
+                It's the legendary crispy pork face platter that put us on the Metro Manila food map. Deep-fried to a blistered golden crisp while keeping the meat juicy and tender.
+              </p>
+              <a href="kapalmuks.html" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.8rem;">Discover the Secret</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Cell 2: Banquet Hall (spans 1 col wide, but spans 2 rows high) -->
+        <div class="bezel-wrapper bento-row-2">
+          <div class="card" style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--color-maroon-bg); height: 100%;">
+            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+              <span class="text-gold text-uppercase-label" style="font-size: 0.75rem;">Private Events</span>
+              <h3 style="font-size: 1.5rem; margin: 12px 0; color: var(--color-price-white);">Our Banquet Hall</h3>
+              <p style="font-size: 0.9rem; color: var(--color-body-cream); margin-bottom: 24px; line-height: 1.5;">
+                Host birthdays, wedding receptions, or corporate gatherings in our fully equipped, air-conditioned venue.
+              </p>
+            </div>
+            <div class="image-placeholder" style="min-height: 180px; background-color: #B24E18; margin-bottom: 24px;"></div>
+            <a href="banquet.html" class="btn btn-secondary" style="width: 100%; text-align: center; font-size: 0.8rem; padding: 10px 0;">Reserve the Hall</a>
+          </div>
+        </div>
+
+        <!-- Bento Cell 3: Dine-In Menu (1 col) -->
+        <div class="bezel-wrapper">
+          <div class="card" style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--color-maroon-bg); height: 100%;">
+            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+              <span class="text-gold text-uppercase-label" style="font-size: 0.75rem;">Dine-In Favorites</span>
+              <h3 style="font-size: 1.4rem; margin: 12px 0; color: var(--color-price-white);">Dine-In Menu</h3>
+              <p style="font-size: 0.9rem; color: var(--color-body-cream); line-height: 1.5;">
+                Explore our hot sizzling sisig grills, crispy seafood, and comforting family-sized soup bowls.
+              </p>
+            </div>
+            <a href="menu/restaurant.html" class="btn btn-secondary" style="width: 100%; text-align: center; font-size: 0.8rem; padding: 8px 0; margin-top: 16px;">View Full Menu</a>
+          </div>
+        </div>
+
+        <!-- Bento Cell 4: Catering Services (1 col) -->
+        <div class="bezel-wrapper">
+          <div class="card" style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; background-color: var(--color-maroon-bg); height: 100%;">
+            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+              <span class="text-gold text-uppercase-label" style="font-size: 0.75rem;">Buffet Catering</span>
+              <h3 style="font-size: 1.4rem; margin: 12px 0; color: var(--color-price-white);">Buffet Services</h3>
+              <p style="font-size: 0.9rem; color: var(--color-body-cream); line-height: 1.5;">
+                Full-service setups, uniformed staff, and custom buffet menus for events of any size.
+              </p>
+            </div>
+            <a href="menu/catering.html" class="btn btn-secondary" style="width: 100%; text-align: center; font-size: 0.8rem; padding: 8px 0; margin-top: 16px;">Explore Packages</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- High-Converting Lead Generation Inquiry Widget -->
+    <section class="bezel-wrapper" id="homeQuickInquiry" style="margin-bottom: 64px;">
+      <div class="bezel-inner-form">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto 32px;">
+          <span class="text-gold text-uppercase-label">Direct Inquiry Portal</span>
+          <h2 style="font-size: 2.2rem; margin-top: 8px; margin-bottom: 12px;">Plan Your Event or Booking</h2>
+          <p style="font-size: 0.95rem; opacity: 0.85;">Submit a quick inquiry, and our culinary event managers will get back to you with custom packages within 24 hours.</p>
+        </div>
+        
+        <form id="quickInquiryForm" style="max-width: 800px; margin: 0 auto;" onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been registered. Our events manager will contact you shortly.'); this.reset();">
+          <div class="content-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 32px;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="quickName">Your Name</label>
+              <input type="text" id="quickName" class="form-control" placeholder="Full Name" required>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="quickContact">Phone or Email</label>
+              <input type="text" id="quickContact" class="form-control" placeholder="Contact Info" required>
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="quickType">Inquiry Type</label>
+              <select id="quickType" class="form-control" required>
+                <option value="catering">Buffet Catering</option>
+                <option value="banquet">Private Banquet Booking</option>
+                <option value="party">Party Trays Delivery/Pickup</option>
+                <option value="table">Table Reservation</option>
+              </select>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px 0; font-size: 0.9rem;">Send Quick Inquiry</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Delivery Platforms & Banner -->
+    <section class="bezel-wrapper" id="homeDelivery" style="margin-bottom: 64px;">
+      <div class="card" style="text-align: center; background-color: var(--color-bg-dark); padding: 40px 24px;">
+        <h2 style="margin-bottom: 12px;">Savor Pepeton's at Home</h2>
+        <p style="max-width: 600px; margin: 0 auto 32px; color: var(--color-body-cream);">
+          Can't make it to Mother Ignacia? Have your favorite sizzling dishes, grills, and party food delivered straight to your doorstep. We are partner-linked with major third-party delivery services in Metro Manila.
+        </p>
+        
+        <div class="content-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; max-width: 800px; margin: 0 auto;">
+          <div class="card" style="padding: 24px; align-items: center; justify-content: center; background-color: var(--color-maroon-bg); display: flex;">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px; fill: #00B14F; margin-bottom: 12px;">
+              <title>Grab</title>
+              <path d="M23.129 10.863a2.927 2.927 0 00-2.079-.872c-.57 0-1.141.212-1.455.421-.651.434-1.186.904-2.149 2.148v.894c.817-1.064 1.59-1.903 2.177-2.364.386-.31.933-.501 1.427-.501 1.275 0 2.352 1.077 2.352 2.352v.538c0 .63-.247 1.223-.698 1.668a2.341 2.341 0 01-1.654.685c-1.048 0-1.97-.719-2.22-1.701l-.422.51c.307 1.03 1.417 1.789 2.642 1.789.778 0 1.516-.31 2.079-.872.562-.562.871-1.3.871-2.079v-.538c0-.778-.31-1.517-.871-2.078m-12.8-.274c.406 0 .757.087 1.074.266.149-.186.299-.337.411-.449-.335-.256-.903-.415-1.485-.415-.83 0-1.584.3-2.122.843-.534.54-.83 1.287-.83 2.107v3.489h.598V12.94c0-1.385.968-2.352 2.354-2.352m5.678 5.84v-3.488c0-1.072-.84-1.913-1.913-1.913-.5 0-.976.203-1.343.57a1.895 1.895 0 00-.57 1.343v.538c0 1.037.877 1.913 1.913 1.913.285 0 .671-.07.908-.264v-.631c-.232.187-.57.298-.908.298a1.302 1.302 0 01-1.315-1.316v-.538a1.3 1.3 0 011.315-1.314 1.3 1.3 0 011.316 1.314v3.489zM0 12.596v.193c0 1.036.393 2.003 1.107 2.722a3.759 3.759 0 002.689 1.112c.82 0 1.548-.186 2.162-.551.506-.302.73-.607.75-.635V12.22H3.65v.597H6.11v2.434l-.002.002c-.288.288-.972.77-2.312.77a3.165 3.165 0 01-2.279-.938 3.247 3.247 0 01-.92-2.297v-.193c0-.83.375-1.656 1.026-2.269a3.558 3.558 0 012.442-.967c.847 0 1.438.129 1.913.416v-.67c-.494-.21-1.085-.305-1.913-.305C1.862 8.8 0 10.538 0 12.595m10.329-.968c.226 0 .419.037.571.112.075-.186.151-.339.262-.525-.162-.116-.549-.186-.833-.186-1.09 0-1.913.823-1.913 1.913v3.489h.598V12.94c0-.774.54-1.314 1.315-1.314m-4.351-.702v-.707c-.541-.29-1.131-.419-1.913-.419-.799 0-1.555.293-2.132.824-.577.532-.895 1.233-.895 1.972v.193c0 1.542 1.237 2.796 2.758 2.796 1.237 0 1.745-.405 1.874-.533v-1.794H3.65v.598h1.46v.899l-.005.001c-.187.075-.578.231-1.31.231-.58 0-1.122-.225-1.528-.636a2.203 2.203 0 01-.632-1.562v-.193c0-1.192 1.113-2.198 2.43-2.198.91 0 1.45.147 1.913.528m14.105 1.126c.27-.27.623-.424.967-.424.737 0 1.315.577 1.315 1.314v.538c0 .738-.578 1.316-1.315 1.316-.357 0-.702-.196-.972-.55a2.151 2.151 0 01-.418-1.12l-.484.591c.095.452.33.885.665 1.19.344.313.774.486 1.209.486a1.915 1.915 0 001.913-1.913v-.538c0-.499-.202-.977-.57-1.343a1.896 1.896 0 00-1.343-.57c-.316 0-.818.114-1.417.652l-.002.002c-.16.16-.536.536-.765.804-.384.42-.943 1.054-1.42 1.688v.933c.529-.68.833-1.06 1.33-1.634.445-.519.996-1.15 1.307-1.422m-8.939 1.428c0 .779.31 1.517.872 2.08a2.93 2.93 0 002.078.87c.33 0 .669-.07.908-.188v-.597c-.28.117-.618.188-.908.188-1.274 0-2.352-1.077-2.352-2.353v-.538c0-1.275 1.078-2.352 2.352-2.352a2.34 2.34 0 012.353 2.353v3.488h.598v-3.604a2.979 2.979 0 00-.915-2.006 2.92 2.92 0 00-2.036-.83c-.778 0-1.516.31-2.078.873a2.926 2.926 0 00-.872 2.078zm6.918-2.313c.183-.22.372-.443.596-.631V7.378h-.596zm1.037-.876V7.378h.597V9.88a3.601 3.601 0 00-.597.41"/>
+            </svg>
+            <h3>GrabFood</h3>
+            <p style="font-size: 0.85rem; margin: 8px 0 16px;">Available for delivery across QC & adjacent cities.</p>
+            <a href="https://food.grab.com" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.8rem;">Order GrabFood</a>
+          </div>
+          
+          <div class="card" style="padding: 24px; align-items: center; justify-content: center; background-color: var(--color-maroon-bg); display: flex;">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px; fill: #D70F64; margin-bottom: 12px;">
+              <title>foodpanda</title>
+              <path d="M4.224 0a3.14 3.14 0 00-3.14 3.127 3.1 3.1 0 001.079 2.36 11.811 11.811 0 00-2.037 6.639C.126 18.68 5.458 24 12 24c6.542 0 11.874-5.32 11.874-11.874a11.69 11.69 0 00-2.025-6.614 3.136 3.136 0 001.09-2.373A3.132 3.132 0 0019.8.012a3.118 3.118 0 00-2.636 1.438A11.792 11.792 0 0012.012.264c-1.845 0-3.595.419-5.152 1.174A3.133 3.133 0 004.224 0zM12 1.198c1.713 0 3.331.396 4.78 1.102a10.995 10.995 0 014.29 3.715 10.89 10.89 0 011.882 6.135c.011 6.039-4.901 10.951-10.94 10.951-6.04 0-10.951-4.912-10.951-10.951 0-2.277.694-4.386 1.88-6.135A11.08 11.08 0 017.232 2.3 10.773 10.773 0 0112 1.198zM7.367 6.345c-.853.012-1.743.292-2.28.653-1.031.682-2.29 2.156-2.085 4.181.191 2.025 1.785 3.283 2.612 3.283.826 0 1.234-.42 1.485-1.45.252-1.018 1.115-2.192 2.217-3.45s-.024-2.469-.024-2.469c-.393-.513-1.052-.727-1.755-.747a3.952 3.952 0 00-.17-.001zm9.233.007l-.17.001c-.702.02-1.358.233-1.746.752 0 0-1.126 1.21-.024 2.469 1.114 1.258 1.965 2.432 2.217 3.45.251 1.019.659 1.438 1.485 1.45.827 0 2.409-1.258 2.612-3.283.204-2.025-1.054-3.51-2.084-4.182-.544-.36-1.437-.643-2.29-.657zm-8.962 2c.348 0 .624.275.624.623-.012.335-.288.623-.624.623a.619.619 0 01-.623-.623c0-.348.276-.624.623-.624zm8.891 0c.348 0 .623.275.623.623-.012.335-.287.623-.623.623a.619.619 0 01-.623-.623c0-.348.288-.624.623-.624zm-4.541 4.025c-.527 0-2.06.096-2.06.587 0 .887 1.88 1.522 2.06 1.474.18.048 2.06-.587 2.06-1.474 0-.49-1.52-.587-2.06-.587zM9.076 15.17c0 1.414 1.294 2.564 2.912 2.564 1.618 0 2.924-1.15 2.924-2.564z"/>
+            </svg>
+            <h3>Foodpanda</h3>
+            <p style="font-size: 0.85rem; margin: 8px 0 16px;">Order your comfort meals quickly and reliably.</p>
+            <a href="https://www.foodpanda.ph" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.8rem;">Order Foodpanda</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3 class="text-gold">Pepeton's Grill</h3>
+        <p>Serving the best traditional Filipino grill, seafood, and the famous Kapalmuks since founding.</p>
+        <p style="margin-top: 16px;"><strong class="text-gold">Address:</strong><br>109 Mother Ignacia Ave, Diliman, Quezon City, Metro Manila</p>
+      </div>
+      
+      <div class="footer-col">
+        <h3 class="text-gold">Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="menu/restaurant.html">Restaurant Menu</a></li>
+          <li><a href="menu/catering.html">Catering & Banquet</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="text-gold">Connect With Us</h3>
+        <p><strong class="text-gold">Phone:</strong> <a href="tel:+63289262525" class="text-gold">+63 2 8926 2525</a></p>
+        <p><strong class="text-gold">Email:</strong> info@pepetonsgrill.com</p>
+        <p style="margin-top: 16px;">Follow our social media channels for the latest news and promotions.</p>
+        <p style="margin-top: 12px; display: flex; gap: 16px; align-items: center;">
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="text-gold" aria-label="Facebook" style="display: flex; align-items: center;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="text-gold" aria-label="Instagram" style="display: flex; align-items: center;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Pepeton's Grill & Catering. All rights reserved. | 109 Mother Ignacia Ave, Quezon City
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

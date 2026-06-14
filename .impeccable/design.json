@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-14T00:31:00Z",
+  "title": "Design System: Pepeton's Grill & Catering",
+  "extensions": {
+    "colorMeta": {
+      "background-dark": { "role": "neutral", "displayName": "Grill Ember Black", "canonical": "oklch(98.85% 0.006 84.56)", "tonalRamp": ["#080402", "#110905", "#fdfbf7", "#2c170d", "#3d2112", "#4f2b18", "#723e22", "#f5e9e2"] },
+      "maroon-bg": { "role": "neutral", "displayName": "Oxblood Maroon", "canonical": "oklch(100.00% 0.000 0.00)", "tonalRamp": ["#140303", "#280707", "#ffffff", "#540e0e", "#6d1212", "#861717", "#a01b1b", "#fae6e6"] },
+      "brown-mid": { "role": "neutral", "displayName": "Hearth Brown", "canonical": "oklch(91.37% 0.012 84.58)", "tonalRamp": ["#200e05", "#3e1c0b", "#e6e2da", "#7a3715", "#98451a", "#b6531f", "#d46124", "#fbece4"] },
+      "header-gold": { "role": "primary", "displayName": "Kinpaku Gold", "canonical": "oklch(67.02% 0.094 78.05)", "tonalRamp": ["#473801", "#806602", "#b99303", "#f2c104", "#b58e4f", "#f7d248", "#fadfa7", "#fef9e8"] },
+      "body-cream": { "role": "neutral", "displayName": "Body Cream", "canonical": "oklch(32.99% 0.018 52.84)", "tonalRamp": ["#3b3323", "#6c5d40", "#98845c", "#c2b496", "#e0d8c7", "#3d332d", "#f5eee1", "#fbf9f5"] },
+      "section-red": { "role": "primary", "displayName": "Chili Red", "canonical": "oklch(47.41% 0.147 24.70)", "tonalRamp": ["#3f130e", "#72221a", "#a43125", "#9e2f2f", "#d35e52", "#e28a80", "#f0b6b0", "#fbeceb"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display Title", "purpose": "Hero titles and massive display headings only." },
+      "headline": { "displayName": "Section Headline", "purpose": "Main section headings." },
+      "title": { "displayName": "Card Title / Menu Item", "purpose": "Card headings and menu item titles." },
+      "body": { "displayName": "Body Paragraphs", "purpose": "Standard prose and descriptive text." },
+      "label": { "displayName": "Capitalized Eyebrow", "purpose": "Uppercase metadata tags and form labels." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Standard exponential transition curve." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "375px" },
+      { "name": "tablet", "value": "768px" },
+      { "name": "desktop", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Standard call-to-action button.",
+      "html": "<button class=\"ds-btn-primary\">Book Catering</button>",
+      "css": ".ds-btn-primary { background: #9E2F2F; color: #FFFFFF; font-family: 'Manrope', sans-serif; font-size: 1rem; font-weight: 700; border: none; padding: 12px 28px; border-radius: 50px; cursor: pointer; transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-primary:hover { background: #A55325; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outline button for secondary actions.",
+      "html": "<button class=\"ds-btn-secondary\">View Full Menu</button>",
+      "css": ".ds-btn-secondary { background: transparent; color: #B58E4F; font-family: 'Manrope', sans-serif; font-size: 1rem; font-weight: 700; border: 1px solid #B58E4F; padding: 12px 28px; border-radius: 50px; cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-secondary:hover { background: #B58E4F; color: #FDFBF7; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Ancestral Hearth",
+    "overview": "Pepeton's website uses a premium, deeply atmospheric dark theme that transports visitors straight into the sensory experience of a traditional Filipino grillhouse. The design rejects the cold, sterile, white-backed templates of modern web design in favor of visual warmth, smoky textures, and heritage typography.",
+    "keyCharacteristics": [
+      "Committed Dark Palette mirroring the charred wood, roasted meats, and embers of the grill.",
+      "Bold Serif Presence through high-contrast headings that carry the weight of a heritage family brand.",
+      "Visual Food-First Layouts featuring photography set against dark, textured backdrops.",
+      "Warm Accents of gold, warm orange, and rich crimson to guide attention, action, and flavor cues."
+    ],
+    "rules": [
+      { "name": "The Golden Ember Rule", "body": "Red and Gold combined must cover less than 15% of any page surface. They are signaling devices for flavor, brand, and actions; overusing them dilutes their premium impact.", "section": "colors" },
+      { "name": "The No-Caps Prose Rule", "body": "Never write paragraph sentences or subheadings in all-caps. Capitalization is reserved exclusively for labels, prices, or short navigation tags of four words or less.", "section": "typography" }
+    ],
+    "dos": [
+      "Do use high-quality, saturated photographs of Filipino food with dark/smoky lighting to match the Ember canvas.",
+      "Do check contrast on text: Body Cream text on Maroon Background has a contrast ratio of >7:1.",
+      "Do structure menus as reflowing lists that collapse to single-column cards on screens under 768px.",
+      "Do feature the official logo cropped-logo.png prominently in the navigation header and footer."
+    ],
+    "donts": [
+      "Don't use Playfair Display or Inter fonts.",
+      "Don't use standard white, gray, or cool slate backgrounds.",
+      "Don't use side-stripe borders as card accents. Use full borders (1px solid #5C2A10) or nothing.",
+      "Don't use gradient text or decorative glassmorphism.",
+      "Don't use nested cards."
+    ]
+  }
+}
