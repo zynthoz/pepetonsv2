@@ -1,25 +1,29 @@
 Backgrounds
 Background
-#FDFBF7
+#1C1917 (Soft warm-charcoal)
 Maroon bg
-#FFFFFF
+#2A2421 (Warm dark-brown container)
 Brown mid
-#E6E2DA
+#5A514B
 
 Text colors
-Header gold
-#B58E4F
+Header gold (light bg)
+#F48E4F
+Header gold (dark bg)
+#F48E4F
 Body cream
-#3D332D
+#E5E0D8
 Price white
-#1A110D
+#F5F1E9
 
 Accents
 Section red
-#9E2F2F
+#44B0C0
 Warm orange
-#A55325
+#FF9E60
 Heart accent
-#B52233
+#D67080
 Divider brown
-#C4B0A0
+#3D3530
+Slogan badge bg
+#D96B27 (Vibrant warm terracotta orange)

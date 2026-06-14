@@ -1,16 +1,17 @@
 /* Core Design Tokens */
 :root {
   /* Colors */
-  --color-bg-dark: #FDFBF7; /* Premium off-white paper canvas */
-  --color-maroon-bg: #FFFFFF; /* Pure white containers/header/footer */
-  --color-brown-mid: #E6E2DA; /* Light warm-gray borders/dividers */
-  --color-header-gold: #D96B27; /* Muted Logo Orange */
-  --color-body-cream: #3D332D; /* Elegant dark charcoal-brown for readable text */
-  --color-price-white: #1E1B1A; /* Very dark charcoal from logo background */
-  --color-section-red: #1E8B9B; /* Muted Logo Fish Teal-Blue */
-  --color-warm-orange: #D96B27; /* Muted Logo Orange */
+  --color-bg-dark: #1C1917; /* Soft warm-charcoal canvas (reduces eye strain/glare) */
+  --color-maroon-bg: #2A2421; /* Warm dark-brown container background */
+  --color-brown-mid: #5A514B; /* Accessible midtone border */
+  --color-header-gold: #F48E4F; /* Light vibrant brand orange (passes 4.5:1 on dark) */
+  --color-header-gold-dark-bg: #F48E4F; /* Unified orange for dark mode */
+  --color-body-cream: #E5E0D8; /* Soft warm-cream readable text */
+  --color-price-white: #F5F1E9; /* Soft warm-white for headings (prevents stark halation) */
+  --color-section-red: #44B0C0; /* Light brand teal-blue (passes 4.5:1 on dark) */
+  --color-warm-orange: #FF9E60; /* Brighter orange for hover states */
   --color-heart-accent: #D67080; /* Muted Logo Pig Pink */
-  --color-divider-brown: #C4B0A0; /* Soft sand divider */
+  --color-divider-brown: #3D3530; /* Softer divider line */
 
   /* Spacing Scale (4pt base) */
   --space-xs: 4px;
@@ -22,7 +23,7 @@
   --space-xxxl: 96px;
 
   /* Fonts */
-  --font-display: 'Fredoka', 'Manrope', sans-serif;
+  --font-display: 'Manrope', sans-serif;
   --font-body: 'Manrope', sans-serif;
 
   /* Motion Curves */
@@ -57,17 +58,17 @@ body {
 /* Typography Utility Classes */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 600; /* Semi-bold, friendly, and fun for a family grill vibe */
   color: var(--color-price-white);
   text-wrap: balance;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em; /* Friendly, round spacing */
   line-height: 1.25;
 }
 
 .text-price {
   color: var(--color-price-white);
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 600; /* Semi-bold for prices */
 }
 
 .text-gold {
@@ -83,6 +84,24 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: 0.12em; /* Open tracking for small uppercase labels */
   text-transform: uppercase;
+}
+
+.slogan-badge {
+  font-family: 'Pacifico', 'Dancing Script', 'Satisfy', 'Yellowtail', cursive;
+  font-size: 1.5rem;
+  font-weight: 400; /* Use default imported weight (regular 400) to avoid faux-bold synthesis */
+  color: #FFFFFF;
+  background-color: #D96B27; /* Vibrant warm terracotta orange (#D96B27) from user request. Passes WCAG AA large text contrast (3.43:1 > 3.0:1) */
+  padding: 6px 18px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  transform: rotate(-1.5deg);
+  line-height: 1.2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-transform: none;
+  letter-spacing: normal;
+  -webkit-text-stroke: 0.1px #FFFFFF; /* Extremely fine outline for crisp rendering without thickening */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Subtly enhances text legibility on the lighter orange */
 }
 
 a {
@@ -117,7 +136,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-price-white);
+  background-color: var(--color-maroon-bg);
   border-bottom: 1px solid var(--color-brown-mid);
 }
 
@@ -154,7 +173,7 @@ header {
 }
 
 .nav-links a {
-  color: var(--color-bg-dark);
+  color: var(--color-body-cream);
   font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -166,8 +185,8 @@ header {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--color-header-gold);
-  border-bottom-color: var(--color-header-gold);
+  color: var(--color-section-red);
+  border-bottom-color: var(--color-section-red);
 }
 
 /* Mobile Nav Toggle */
@@ -183,7 +202,7 @@ header {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--color-header-gold);
+  background-color: var(--color-section-red);
   margin: 5px 0;
   transition: 0.3s;
 }
@@ -228,7 +247,7 @@ footer {
   bottom: 0;
   width: 40px;
   height: 2px;
-  background-color: var(--color-header-gold);
+  background-color: var(--color-section-red); /* Balanced teal-blue accent underline */
 }
 
 .footer-col p, .footer-col ul {
@@ -245,8 +264,14 @@ footer {
 }
 
 .footer-col ul li a:hover {
-  color: var(--color-header-gold);
+  color: var(--color-section-red); /* Teal-blue hover state */
 }
+
+/* Override gold accents in the footer to use the brand's teal-blue color for balanced accent weight */
+footer .text-gold {
+  color: var(--color-section-red) !important;
+}
+
 
 .footer-bottom {
   text-align: center;
@@ -276,11 +301,11 @@ footer {
 
 .btn-primary {
   background-color: var(--color-section-red);
-  color: #FFFFFF;
+  color: var(--color-bg-dark);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-warm-orange);
+  background-color: #5CC3D2; /* Brighter teal for hover state */
   transform: scale(1.02);
 }
 
@@ -328,18 +353,32 @@ footer {
 
 /* Hero Section */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
+  height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
   align-items: center;
-  padding: var(--space-xl) 0;
-  border-bottom: 1px solid var(--color-brown-mid);
+  position: relative;
+  overflow: hidden;
+  padding: 0 8%;
+  margin-bottom: 64px;
+  border-bottom: none;
+  background-color: var(--color-bg-dark);
+  box-sizing: border-box;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 4;
+  max-width: 650px;
+  margin-left: 48px; /* Offset for floating social bar */
 }
 
 .hero-content h1 {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   margin-bottom: var(--space-lg);
   line-height: 1.1;
+  color: #FFFFFF;
 }
 
 .hero-tagline {
@@ -347,6 +386,7 @@ footer {
   color: var(--color-body-cream);
   margin-bottom: var(--space-xl);
   font-family: var(--font-display);
+  line-height: 1.6;
 }
 
 .hero-actions {
@@ -363,6 +403,141 @@ footer {
   border-top: 1px solid var(--color-brown-mid);
   padding-top: var(--space-lg);
   opacity: 0.9;
+}
+
+/* Hero Elements & Animations */
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(12, 10, 9, 0.8) 0%, rgba(12, 10, 9, 0) 100%) !important;
+  border-bottom: none !important;
+  z-index: 100;
+}
+
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(to right, rgba(12, 10, 9, 0.85) 0%, rgba(12, 10, 9, 0.45) 50%, rgba(12, 10, 9, 0.05) 100%);
+}
+
+.hero-social-bar {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: rgba(42, 36, 33, 0.45);
+  border: 1px solid rgba(90, 81, 75, 0.4);
+  padding: 24px 12px;
+  border-radius: 40px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-social-bar a {
+  color: var(--color-body-cream);
+  opacity: 0.8;
+  transition: color 0.3s, opacity 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-social-bar a:hover {
+  color: var(--color-section-red);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.hero-floating-food {
+  position: absolute;
+  right: 8%;
+  bottom: 15%;
+  z-index: 5;
+  width: 400px;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(244, 142, 79, 0.3);
+  transform: rotate(-2.5deg);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  animation: floatAnimation 6s ease-in-out infinite alternate;
+  transition: transform 0.5s var(--motion-ease-standard);
+}
+
+.hero-floating-food img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-floating-food:hover {
+  transform: scale(1.03) rotate(0deg);
+  border-color: rgba(244, 142, 79, 0.8);
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0) rotate(-2.5deg);
+  }
+  100% {
+    transform: translateY(-12px) rotate(-1.5deg);
+  }
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 3;
+}
+
+#homeHero {
+  margin-bottom: 0;
+}
+
+#homeBento {
+  padding-top: var(--space-xl);
 }
 
 /* Cards & Layouts */
@@ -452,34 +627,76 @@ footer {
 
 .menu-item {
   display: flex;
-  justify-content: space-between;
-  gap: var(--space-md);
-  border-bottom: 1px dashed var(--color-brown-mid);
-  padding-bottom: var(--space-md);
-  margin-bottom: var(--space-md);
+  gap: 16px;
+  border-bottom: 1px dashed var(--color-divider-brown);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  align-items: flex-start;
 }
 
-.menu-item-info {
+.menu-item-img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-brown-mid);
+}
+
+.menu-item-img img,
+.menu-item-img .image-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: var(--color-maroon-bg);
+}
+
+.menu-item-content {
   flex-grow: 1;
-  max-width: 80%;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
 }
 
 .menu-item-name {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--color-price-white);
-  margin-bottom: var(--space-xs);
+  font-weight: 600;
+  margin: 0;
 }
 
 .menu-item-desc {
-  font-size: 0.9rem;
-  opacity: 0.85;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  line-height: 1.4;
+  color: var(--color-body-cream);
+  margin: 0;
 }
 
 .menu-item-price {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
+  color: var(--color-header-gold);
   white-space: nowrap;
+}
+
+.signature-tag {
+  font-size: 0.7rem;
+  background-color: var(--color-section-red);
+  color: #FFFFFF;
+  padding: 1px 6px 2px;
+  border-radius: var(--radius-sm);
+  margin-left: 6px;
+  font-weight: 700;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
 }
 
 /* Catering and Banquet Package Tiers */
@@ -554,7 +771,7 @@ footer {
 
 select.form-control {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23D96B27' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23F48E4F' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: calc(100% - 16px) center;
   padding-right: 40px;
@@ -613,7 +830,7 @@ select.form-control {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--color-price-white);
+    background-color: var(--color-maroon-bg);
     border-bottom: 1px solid var(--color-brown-mid);
     padding: var(--space-lg);
     gap: var(--space-md);
@@ -632,9 +849,21 @@ select.form-control {
   }
 
   .hero {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 24px 60px;
     text-align: center;
+    justify-content: center;
     gap: var(--space-lg);
+  }
+  
+  .hero-content {
+    margin-left: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .hero-actions {
@@ -643,6 +872,34 @@ select.form-control {
   
   .hero-operating-info {
     justify-content: center;
+  }
+
+  .hero-social-bar {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px 24px;
+    margin-top: 24px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(42, 36, 33, 0.6);
+  }
+
+  .hero-floating-food {
+    position: static;
+    margin: 32px auto 0;
+    width: 100%;
+    max-width: 340px;
+    height: 220px;
+    transform: none;
+    animation: none;
+  }
+
+  .hero-floating-food:hover {
+    transform: scale(1.02);
   }
 
   .contact-container {
@@ -676,30 +933,20 @@ select.form-control {
   grid-row: span 2;
 }
 
-/* Double-Bezel Concentric Structural Panels */
+/* Simplified Layout Enclosures (formerly double-bezel panels) */
 .bezel-wrapper {
-  border: 1px solid var(--color-brown-mid);
-  padding: 8px;
-  border-radius: 20px;
-  background-color: var(--color-maroon-bg);
   box-sizing: border-box;
-  transition: border-color 0.3s cubic-bezier(0.32, 0.72, 0, 1);
-}
-
-.bezel-wrapper:hover {
-  border-color: var(--color-header-gold);
 }
 
 .bezel-wrapper .card {
-  border: none;
-  border-radius: 12px;
   height: 100%;
   margin-bottom: 0;
 }
 
 .bezel-inner-form {
   background-color: var(--color-bg-dark);
-  border-radius: 12px;
+  border: 1px solid var(--color-brown-mid);
+  border-radius: var(--radius-md);
   padding: 32px;
 }
 
@@ -723,5 +970,74 @@ select.form-control {
   
   .bento-flex-mobile > div {
     width: 100% !important;
+  }
+
+  /* Force multi-column content-grids to stack vertically on tablets and mobile */
+  .content-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+  }
+}
+
+/* Venue Highlights Panel (Clean, non-AI style) */
+.venue-highlights-container {
+  background-color: var(--color-maroon-bg);
+  border: 1px solid var(--color-divider-brown);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  margin-bottom: 48px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.venue-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.venue-highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.venue-highlight-item:not(:last-child) {
+  border-right: 1px solid var(--color-divider-brown);
+}
+
+.venue-highlight-item h3 {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--color-price-white);
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.venue-highlight-item p {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--color-body-cream);
+}
+
+@media (max-width: 768px) {
+  .venue-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .venue-highlight-item {
+    padding: 0;
+  }
+  
+  .venue-highlight-item:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--color-divider-brown);
+    padding-bottom: 24px;
   }
 }

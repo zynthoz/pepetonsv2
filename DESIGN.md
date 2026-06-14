@@ -2,33 +2,34 @@
 name: Pepeton's Grill & Catering Design System
 description: A rich, heritage-inspired dark visual language for authentic Filipino cuisine.
 colors:
-  background-dark: "#FDFBF7"
-  maroon-bg: "#FFFFFF"
-  brown-mid: "#E6E2DA"
-  header-gold: "#B58E4F"
-  body-cream: "#3D332D"
-  price-white: "#1A110D"
-  section-red: "#9E2F2F"
-  warm-orange: "#A55325"
-  heart-accent: "#B52233"
-  divider-brown: "#C4B0A0"
+  background-dark: "#0C0A09"
+  maroon-bg: "#1C1816"
+  brown-mid: "#5A514B"
+  header-gold: "#F48E4F"
+  header-gold-dark-bg: "#F48E4F"
+  body-cream: "#E6E2DA"
+  price-white: "#FFFFFF"
+  section-red: "#44B0C0"
+  warm-orange: "#FF9E60"
+  heart-accent: "#D67080"
+  divider-brown: "#3E3834"
 typography:
   display:
-    fontFamily: "Prata, Georgia, serif"
+    fontFamily: "Manrope, sans-serif"
     fontSize: "clamp(2.5rem, 6vw, 5rem)"
-    fontWeight: 400
-    lineHeight: 1.1
-    letterSpacing: "-0.02em"
+    fontWeight: 600
+    lineHeight: 1.15
+    letterSpacing: "-0.01em"
   headline:
-    fontFamily: "Prata, Georgia, serif"
+    fontFamily: "Manrope, sans-serif"
     fontSize: "clamp(1.8rem, 4vw, 3rem)"
-    fontWeight: 400
+    fontWeight: 600
     lineHeight: 1.2
     letterSpacing: "-0.01em"
   title:
-    fontFamily: "Prata, Georgia, serif"
+    fontFamily: "Manrope, sans-serif"
     fontSize: "1.5rem"
-    fontWeight: 400
+    fontWeight: 600
     lineHeight: 1.3
   body:
     fontFamily: "Manrope, sans-serif"
@@ -85,32 +86,31 @@ Key Characteristics:
 The color palette is derived directly from the physical restaurant's menus, food colors (crispy skin, slow-cooked marinades), and hearth embers.
 
 ### Primary
-- **Grill Ember Black** (`#FDFBF7` / `oklch(98.85% 0.006 84.56)`): The canvas. Used as the main page background to establish a light, clean, paper-like atmosphere.
-- **Oxblood Maroon** (`#FFFFFF` / `oklch(100.00% 0.000 0.00)`): The secondary canvas. Used for section containers, header navigation backgrounds, and cards.
-- **Hearth Brown** (`#E6E2DA` / `oklch(91.37% 0.012 84.58)`): The midtone border and container backdrop. Emphasizes visual groupings.
+- **Grill Ember Black** (`#0C0A09` / `oklch(10.22% 0.007 72.33)`): The canvas. Used as the main page background to establish a premium, deep black/charcoal atmospheric aesthetic.
+- **Oxblood Maroon** (`#1C1816` / `oklch(16.14% 0.011 50.84)`): The secondary canvas. Used for section containers, header navigation backgrounds, and cards.
+- **Hearth Brown** (`#5A514B` / `oklch(40.23% 0.021 59.33)`): The midtone border and container backdrop. Ensures >= 3.0:1 contrast for user interface control borders.
 
 ### Accents
-- **Kinpaku Gold** (`#B58E4F` / `oklch(67.02% 0.094 78.05)`): The signature highlight. Reserved for key display headings, category titles, active links, and brand icons.
-- **Chili Red** (`#9E2F2F` / `oklch(47.41% 0.147 24.70)`): The conversion action color. Used for primary CTAs ("Book Catering", "Inquire Now") and section titles.
-- **Sunburst Orange** (`#A55325` / `oklch(53.46% 0.123 47.15)`): Used for secondary hover states, highlight badges, and subtle borders.
-- **Fiesta Pink-Red** (`#B52233` / `oklch(50.45% 0.181 21.33)`): A high-energy accent color reserved strictly for hearts, favorites, and rare celebratory highlights.
+- **Muted Logo Orange** (`#F48E4F` / `oklch(73.55% 0.155 58.67)`): The signature highlight. Reserved for headings, category titles, active links, and brand icons.
+- **Muted Logo Fish Teal-Blue** (`#44B0C0` / `oklch(71.22% 0.118 206.33)`): Accent brand color for primary CTA buttons and text elements. Passes >= 4.5:1 text contrast on dark backgrounds.
+- **Fiesta Pink-Red** (`#D67080` / `oklch(62.33% 0.142 12.35)`): Muted brand pink accent.
 
 ### Neutrals
-- **Body Cream** (`#3D332D` / `oklch(32.99% 0.018 52.84)`): The primary ink. Used for body paragraphs, sub-labels, and metadata to ensure a warm, highly-readable contrast on light backgrounds.
-- **Crisp White** (`#FFFFFF` / `oklch(100% 0 0)`): High-contrast ink. Used exclusively for prices, buttons, and high-importance details.
-- **Mortar Brown** (`#8B4513` / `oklch(41.34% 0.134 45)`): Divider color. Used for borders, grid separators, and horizontal lines.
+- **Body Cream** (`#E6E2DA` / `oklch(91.37% 0.012 84.58)`): The primary ink. Used for body paragraphs, sub-labels, and metadata to ensure a warm, highly-readable contrast on dark backgrounds.
+- **Crisp White** (`#FFFFFF` / `oklch(100% 0 0)`): High-contrast ink. Used exclusively for headings, prices, buttons, and high-importance details.
+- **Mortar Brown** (`#3E3834` / `oklch(27.45% 0.012 55.43)`): Divider color. Used for borders, grid separators, and horizontal lines.
 
 **The Golden Ember Rule.** Red and Gold combined must cover less than 15% of any page surface. They are signaling devices for flavor, brand, and actions; overusing them dilutes their premium impact.
 
 ## 3. Typography
 
-**Display Font:** Prata (Google Fonts serif fallback)
+**Display Font:** Manrope (Google Fonts geometric sans-serif)
 **Body Font:** Manrope (Google Fonts sans-serif fallback)
 
 ### Hierarchy
-- **Display** (Regular 400, `clamp(2.5rem, 6vw, 5rem)`, 1.1 line-height): Used for home hero titles and large page introductions. Always set with negative tracking (`-0.02em`) and balanced text wrapping.
-- **Headline** (Regular 400, `clamp(1.8rem, 4vw, 3rem)`, 1.2 line-height): Used for section headings (e.g., "Our Story", "Restaurant Menu").
-- **Title** (Regular 400, `1.5rem`, 1.3 line-height): Used for card headings, menu item names, and form labels.
+- **Display** (Semi-bold 600, `clamp(2.5rem, 6vw, 5rem)`, 1.15 line-height): Used for home hero titles and large page introductions. Always set with tight tracking (`-0.01em`) and balanced text wrapping for a modern and professional style.
+- **Headline** (Semi-bold 600, `clamp(1.8rem, 4vw, 3rem)`, 1.2 line-height): Used for section headings (e.g., "Our Story", "Restaurant Menu").
+- **Title** (Semi-bold 600, `1.5rem`, 1.3 line-height): Used for card headings, menu item names, and form labels.
 - **Body** (Regular 400, `1rem` [16px], 1.6 line-height): Used for all descriptive text, story copy, and instructions. Maintained at a strict maximum width of `70ch` for readability.
 - **Label** (Bold 700, `0.85rem` [13.6px], `0.1em` letter-spacing, Uppercase): Used for eyebrows, category tabs, menu metadata, and badge text.
 
@@ -118,10 +118,10 @@ The color palette is derived directly from the physical restaurant's menus, food
 
 ## 4. Elevation
 
-The design system sits in a physical room; it is flat and layered rather than floating. It rejects modern drop-shadows and glassmorphism, featuring a completely shadowless flat aesthetic. Depth is achieved via color layering (Oxblood Maroon containers sitting on Grill Ember Black backgrounds) and structural wood-grain borders.
+The design system sits in a physical room; it is flat and layered rather than floating. It rejects modern drop-shadows and glassmorphism, featuring a completely shadowless flat aesthetic. Depth is achieved via clean color layering (containers sitting on the premium off-white paper canvas) and single structural borders.
 
 ### Elevation & Flatness
-This system features no shadows. All shadows (including text glow and container shadows) are completely removed to maintain a flat, editorial layout.
+This system features no shadows. All shadows (including text glow and container shadows) are completely removed to maintain a flat, editorial layout. Every container uses a single clean border to define its bounds.
 
 ## 5. Components
 
