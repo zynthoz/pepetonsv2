@@ -15,7 +15,7 @@
 <body>
 
   <!-- Top Sticky Header -->
-  <header>
+  <header class="header-overlay">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo" id="headerLogoLink">
         <img src="../assets/logo.png" alt="Pepeton's Logo">
@@ -40,116 +40,118 @@
     </div>
   </header>
 
-  <!-- Page Content -->
-  <main>
-    <section style="text-align: center; margin-bottom: 48px;">
+  <!-- Hero Header Banner -->
+  <section class="hero hero-subpage" style="background-image: url('../assets/catering.png');">
+    <!-- Hero Vignette/Overlay for legibility -->
+    <div class="hero-overlay" style="background: linear-gradient(to right, rgba(12, 10, 9, 0.8) 0%, rgba(12, 10, 9, 0.5) 50%, rgba(12, 10, 9, 0.8) 100%);"></div>
+    
+    <div class="hero-content" style="margin-left: 0; text-align: center; max-width: 800px; padding: 0 var(--space-lg);">
       <span class="text-gold text-uppercase-label">Full Buffet Services</span>
-      <h1 style="font-size: 3rem; margin-top: 8px;">Catering Menu & Packages</h1>
-      <p style="font-family: var(--font-display); font-size: 1.25rem; max-width: 600px; margin: 16px auto 0; color: var(--color-body-cream);">
+      <h1 style="font-size: clamp(2.2rem, 5vw, 3.5rem); margin-top: 8px; color: #FFFFFF; line-height: 1.15;">Catering Menu & Packages</h1>
+      <p class="hero-tagline" style="margin-bottom: 0; font-size: 1.15rem; color: var(--color-body-cream);">
         Celebrate stress-free. We bring our famous Filipino cooking, buffet setups, and professional servers directly to your venue.
       </p>
-    </section>
+    </div>
+
+    <!-- Organic Wave Separator -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 40px; transform: rotateY(180deg);">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V30.25C1123.29,66.36,1059.08,98.7,985.66,92.83Z" fill="var(--color-bg-dark)"></path>
+      </svg>
+    </div>
+  </section>
+
+  <main>
 
     <!-- Introductory and Package Requirements Info -->
-    <div class="bezel-wrapper" style="margin-bottom: 48px;">
-      <section class="card" style="border-top: 4px solid var(--color-section-red) !important; margin-bottom: 0;">
-        <h3>Full Service Event Catering</h3>
-        <p style="margin-top: 8px;">
-          Our catering services include complete buffet setup, polished chaffing dishes, themed table runners, food servers, plates, glasses, and utensils. 
-          We cater to birthdays, corporate seminars, weddings, debuts, and family gatherings across Quezon City and Metro Manila.
-        </p>
-        <p style="margin-top: 12px; font-weight: bold; color: var(--color-header-gold);">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; color: var(--color-header-gold); display: inline-block; vertical-align: text-bottom; margin-right: 6px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg> Minimum Headcount: 50 Guests | Booking Lead Time: At least 7 days in advance.
-        </p>
-      </section>
-    </div>
+    <section class="card" style="border-top: 4px solid var(--color-section-red) !important; margin-bottom: 48px;">
+      <h3>Full Service Catering</h3>
+      <p style="margin-top: 8px; line-height: 1.6;">
+        Complete buffet setup with professional servers, dinnerware, and themed styling for corporate seminars, weddings, and family gatherings across Metro Manila.
+      </p>
+      <p style="margin-top: 12px; font-weight: bold; color: var(--color-header-gold); font-size: 0.95rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 16px; height: 16px; color: var(--color-header-gold); display: inline-block; vertical-align: text-bottom; margin-right: 6px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg> Minimum: 50 Guests | Lead Time: 7 Days
+      </p>
+    </section>
 
     <!-- Catering Package Tiers -->
     <section class="content-grid" style="margin-bottom: 64px;">
       
       <!-- Tier 1: Classic Fiesta Package -->
-      <div class="bezel-wrapper">
-        <div class="card package-card" style="border-top: 4px solid var(--color-brown-mid) !important;">
-          <span class="text-gold text-uppercase-label">Fiesta Package A</span>
-          <h3>Classic Buffet</h3>
-          <p class="package-price">₱550 <span style="font-size: 1rem; color: var(--color-body-cream);">/ guest</span></p>
-          
-          <ul class="package-features">
-            <li>1 Rice (Garlic or Steamed)</li>
-            <li>1 Noodle (Pancit Canton or Bihon)</li>
-            <li>1 Pork Dish (Sizzling Sisig or Sweet Pork Adobo)</li>
-            <li>1 Chicken Dish (Classic Chicken Inasal or Adobo)</li>
-            <li>1 Vegetable (Chopsuey or Stir-fry mixed vegetables)</li>
-            <li>1 Dessert (Buko Pandan or Leche Flan)</li>
-            <li>Bottomless Iced Tea & Water station</li>
-          </ul>
-          
-          <a href="../contact.html?type=catering&package=fiesta-a" class="btn btn-secondary" style="margin-top: auto; width: 100%;">Inquire Package A</a>
-        </div>
+      <div class="card package-card" style="border-top: 4px solid var(--color-brown-mid) !important;">
+        <span class="text-gold text-uppercase-label">Fiesta Package A</span>
+        <h3>Classic Buffet</h3>
+        <p class="package-price">₱550 <span style="font-size: 1rem; color: var(--color-body-cream);">/ guest</span></p>
+        
+        <ul class="package-features">
+          <li>1 Rice (Garlic or Steamed)</li>
+          <li>1 Noodle (Pancit Canton or Bihon)</li>
+          <li>1 Pork Dish (Sizzling Sisig or Sweet Pork Adobo)</li>
+          <li>1 Chicken Dish (Classic Chicken Inasal or Adobo)</li>
+          <li>1 Vegetable (Chopsuey or Stir-fry mixed vegetables)</li>
+          <li>1 Dessert (Buko Pandan or Leche Flan)</li>
+          <li>Bottomless Iced Tea & Water station</li>
+        </ul>
+        
+        <a href="../contact.html?type=catering&package=fiesta-a" class="btn btn-secondary" style="margin-top: auto; width: 100%;">Inquire Package A</a>
       </div>
 
-      <div class="bezel-wrapper" style="transform: scale(1.03); z-index: 2;">
-        <div class="card package-card" style="border-top: 4px solid var(--color-section-red) !important;">
-          <span class="text-red text-uppercase-label">Fiesta Package B</span>
-          <h3>Premium Hearth</h3>
-          <p class="package-price">₱750 <span style="font-size: 1rem; color: var(--color-body-cream);">/ guest</span></p>
-          
-          <ul class="package-features">
-            <li><strong>Includes Kapalmuks Carver Station</strong></li>
-            <li>1 Rice (Garlic or Pepeton's Fried Rice)</li>
-            <li>1 Noodle (Pancit Bam-I or Sotanghon)</li>
-            <li>1 Pork Dish (Crispy Pata or Pork Menudo)</li>
-            <li>1 Chicken Dish (Herb-Roasted Chicken or Inasal)</li>
-            <li>1 Beef Dish (Beef Caldereta or Beef Kare-Kare)</li>
-            <li>1 Seafood (Grilled Tuna Belly or Garlic Butter Shrimp)</li>
-            <li>2 Desserts (Leche Flan & Classic Halo-Halo Station)</li>
-            <li>Bottomless Iced Tea, Cucumber Lemonade & Water</li>
-          </ul>
-          
-          <a href="../contact.html?type=catering&package=fiesta-b" class="btn btn-primary" style="margin-top: auto; width: 100%;">Inquire Package B</a>
-        </div>
+      <div class="card package-card" style="border-top: 4px solid var(--color-section-red) !important; transform: scale(1.03); z-index: 2;">
+        <span class="text-red text-uppercase-label">Fiesta Package B</span>
+        <h3>Premium Hearth</h3>
+        <p class="package-price">₱750 <span style="font-size: 1rem; color: var(--color-body-cream);">/ guest</span></p>
+        
+        <ul class="package-features">
+          <li><strong>Includes Kapalmuks Carver Station</strong></li>
+          <li>1 Rice (Garlic or Pepeton's Fried Rice)</li>
+          <li>1 Noodle (Pancit Bam-I or Sotanghon)</li>
+          <li>1 Pork Dish (Crispy Pata or Pork Menudo)</li>
+          <li>1 Chicken Dish (Herb-Roasted Chicken or Inasal)</li>
+          <li>1 Beef Dish (Beef Caldereta or Beef Kare-Kare)</li>
+          <li>1 Seafood (Grilled Tuna Belly or Garlic Butter Shrimp)</li>
+          <li>2 Desserts (Leche Flan & Classic Halo-Halo Station)</li>
+          <li>Bottomless Iced Tea, Cucumber Lemonade & Water</li>
+        </ul>
+        
+        <a href="../contact.html?type=catering&package=fiesta-b" class="btn btn-primary" style="margin-top: auto; width: 100%;">Inquire Package B</a>
       </div>
 
       <!-- Tier 3: Grand Banquet Package -->
-      <div class="bezel-wrapper">
-        <div class="card package-card" style="border-top: 4px solid var(--color-header-gold) !important;">
-          <span class="text-gold text-uppercase-label">Fiesta Package C</span>
-          <h3>Royal Feast</h3>
-          <p class="package-price">₱950 <span style="font-size: 1rem; color: var(--color-body-cream);">/ guest</span></p>
-          
-          <ul class="package-features">
-            <li><strong>Includes Whole Crispy Lechon</strong></li>
-            <li><strong>Includes Kapalmuks Carver Station</strong></li>
-            <li>2 Rice Varieties (Garlic & Specialty Fried Rice)</li>
-            <li>1 Noodle (Pancit Bam-I or Sotanghon)</li>
-            <li>1 Beef Dish (Beef Kare-Kare or Lengua Estofado)</li>
-            <li>1 Chicken Dish (Cordon Bleu or Roast Chicken)</li>
-            <li>1 Fish Dish (Baked Salmon or Chili Garlic Crab)</li>
-            <li>1 Vegetable (Pinakbet with Bagnet or Broccoli Garlic)</li>
-            <li>3 Desserts (Leche Flan, Buko Pandan, Fresh Fruit Platter)</li>
-            <li>Bottomless Soda, Iced Tea & Infused Waters</li>
-          </ul>
-          
-          <a href="../contact.html?type=catering&package=fiesta-c" class="btn btn-secondary" style="margin-top: auto; width: 100%;">Inquire Package C</a>
-        </div>
+      <div class="card package-card" style="border-top: 4px solid var(--color-header-gold) !important;">
+        <span class="text-gold text-uppercase-label">Fiesta Package C</span>
+        <h3>Royal Feast</h3>
+        <p class="package-price">₱950 <span style="font-size: 1rem; color: var(--color-body-cream);">/ guest</span></p>
+        
+        <ul class="package-features">
+          <li><strong>Includes Whole Crispy Lechon</strong></li>
+          <li><strong>Includes Kapalmuks Carver Station</strong></li>
+          <li>2 Rice Varieties (Garlic & Specialty Fried Rice)</li>
+          <li>1 Noodle (Pancit Bam-I or Sotanghon)</li>
+          <li>1 Beef Dish (Beef Kare-Kare or Lengua Estofado)</li>
+          <li>1 Chicken Dish (Cordon Bleu or Roast Chicken)</li>
+          <li>1 Fish Dish (Baked Salmon or Chili Garlic Crab)</li>
+          <li>1 Vegetable (Pinakbet with Bagnet or Broccoli Garlic)</li>
+          <li>3 Desserts (Leche Flan, Buko Pandan, Fresh Fruit Platter)</li>
+          <li>Bottomless Soda, Iced Tea & Infused Waters</li>
+        </ul>
+        
+        <a href="../contact.html?type=catering&package=fiesta-c" class="btn btn-secondary" style="margin-top: auto; width: 100%;">Inquire Package C</a>
       </div>
 
     </section>
 
     <!-- Buffet Visual Setup Placeholder (Respecting user request to keep placeholders blank) -->
     <section class="content-grid" style="grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: center; margin-bottom: 64px;">
-      <div class="bezel-wrapper" style="width: 100%; height: 100%;">
-        <div class="image-placeholder" id="cateringBuffetPlaceholder" style="min-height: 350px; background-color: #FFA64D;"></div>
-      </div>
+      <div class="image-placeholder" id="cateringBuffetPlaceholder" style="min-height: 350px; background-color: #FFA64D; border-radius: var(--radius-lg); width: 100%; height: 100%;"></div>
 
       <div>
-        <h2 class="menu-section-title">What is Included in Every Booking?</h2>
-        <p style="margin-bottom: 16px;">We make sure your party runs flawlessly. Every package includes: </p>
-        <ul style="margin-bottom: 24px; padding-left: 20px;">
-          <li style="margin-bottom: 8px;"><strong>Complete Catering Staff:</strong> Warm, uniformed buffet servers, carvers, and setup crew.</li>
-          <li style="margin-bottom: 8px;"><strong>Decorated Buffet Table:</strong> Themed overlays, lights, fresh flower arrangements, and dish label tags.</li>
-          <li style="margin-bottom: 8px;"><strong>Guest Setup:</strong> Clean guest tables, cushioned chairs, elegant dining linens, flatware, and glassware.</li>
-          <li style="margin-bottom: 8px;"><strong>Sanitized Utensils:</strong> Heavy-duty, high-grade sanitized forks, spoons, knives, plates, and water tumblers.</li>
+        <h2 class="menu-section-title">Standard Inclusions</h2>
+        <p style="margin-bottom: 16px; line-height: 1.6;">Every package comes complete with:</p>
+        <ul style="margin-bottom: 24px; padding-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 6px;"><strong>Uniformed Staff:</strong> Buffet servers, carvers, and setup crew.</li>
+          <li style="margin-bottom: 6px;"><strong>Styled Buffet Table:</strong> Themed overlays, centerpieces, and dish labels.</li>
+          <li style="margin-bottom: 6px;"><strong>Guest Dining Setup:</strong> Tables, cushioned chairs, linens, flatware, and glassware.</li>
+          <li style="margin-bottom: 6px;"><strong>Sanitized Tableware:</strong> High-grade sanitized plates and utensils.</li>
         </ul>
         <div style="display: flex; gap: 24px; align-items: center;">
           <a href="../contact.html?type=catering" class="btn btn-primary">Book Now</a>
@@ -196,6 +198,11 @@
           <a href="https://instagram.com" target="_blank" rel="noopener" class="text-gold" aria-label="Instagram" style="display: flex; align-items: center;">
             <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="text-gold" aria-label="TikTok" style="display: flex; align-items: center;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.97 1.22 2.34 2.12 3.86 2.57v3.83c-1.84-.04-3.61-.69-5.06-1.83a8.914 8.914 0 0 1-1.3-1.29v8.94c.05 1.89-.52 3.75-1.63 5.25A9.458 9.458 0 0 1 4.28 20.4c-1.72-1.37-2.73-3.48-2.71-5.69.02-2.2 1.05-4.29 2.78-5.64 1.83-1.42 4.2-1.92 6.42-1.34v3.9c-1.1-.35-2.29-.19-3.26.43a4.793 4.793 0 0 0-1.93 3.86c.01 1.4.67 2.73 1.8 3.56a4.896 4.896 0 0 0 5.97-.24c1.02-.91 1.56-2.25 1.48-3.62V0h-.02z"/>
             </svg>
           </a>
         </p>

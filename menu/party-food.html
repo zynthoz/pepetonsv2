@@ -15,7 +15,7 @@
 <body>
 
   <!-- Top Sticky Header -->
-  <header>
+  <header class="header-overlay">
     <div class="nav-container">
       <a href="../index.html" class="nav-logo" id="headerLogoLink">
         <img src="../assets/logo.png" alt="Pepeton's Logo">
@@ -40,28 +40,39 @@
     </div>
   </header>
 
-  <!-- Page Content -->
-  <main>
-    <section style="text-align: center; margin-bottom: 48px;">
+  <!-- Hero Header Banner -->
+  <section class="hero hero-subpage" style="background-image: url('../assets/sisig.png');">
+    <!-- Hero Vignette/Overlay for legibility -->
+    <div class="hero-overlay" style="background: linear-gradient(to right, rgba(12, 10, 9, 0.8) 0%, rgba(12, 10, 9, 0.5) 50%, rgba(12, 10, 9, 0.8) 100%);"></div>
+    
+    <div class="hero-content" style="margin-left: 0; text-align: center; max-width: 800px; padding: 0 var(--space-lg);">
       <span class="text-gold text-uppercase-label">To Go Trays & Pickup</span>
-      <h1 style="font-size: 3rem; margin-top: 8px;">Party Food To Go</h1>
-      <p style="font-family: var(--font-display); font-size: 1.25rem; max-width: 600px; margin: 16px auto 0; color: var(--color-body-cream);">
+      <h1 style="font-size: clamp(2.2rem, 5vw, 3.5rem); margin-top: 8px; color: #FFFFFF; line-height: 1.15;">Party Food To Go</h1>
+      <p class="hero-tagline" style="margin-bottom: 0; font-size: 1.15rem; color: var(--color-body-cream);">
         Host your gatherings with your favorite Pepeton's comfort food, prepared in convenient, high-capacity trays ready for pickup.
       </p>
-    </section>
+    </div>
+
+    <!-- Organic Wave Separator -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 40px; transform: rotateY(180deg);">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V30.25C1123.29,66.36,1059.08,98.7,985.66,92.83Z" fill="var(--color-bg-dark)"></path>
+      </svg>
+    </div>
+  </section>
+
+  <main>
 
     <!-- Lead Time Banner -->
-    <div class="bezel-wrapper" style="margin-bottom: 48px;">
-      <section class="card" style="border-top: 4px solid var(--color-warm-orange) !important; margin-bottom: 0; background-color: var(--color-maroon-bg);">
-        <h3>Ordering Guidelines</h3>
-        <p style="margin-top: 8px; font-size: 0.95rem;">
-          Ideal for birthdays, office potlucks, and small gatherings that want Pepeton's food without needing full buffet setup or waiters.
-        </p>
-        <p style="margin-top: 12px; font-weight: bold; color: var(--color-header-gold);">
-          ⏰ Lead Time: Please order at least two (2) days in advance of your desired pickup date.
-        </p>
-      </section>
-    </div>
+    <section class="card" style="border-top: 4px solid var(--color-warm-orange) !important; margin-bottom: 48px; background-color: var(--color-maroon-bg);">
+      <h3>Ordering Guidelines</h3>
+      <p style="margin-top: 8px; font-size: 0.95rem; line-height: 1.6;">
+        Perfect for office potlucks and family gatherings. Food is served in convenient trays without setup or service staff.
+      </p>
+      <p style="margin-top: 12px; font-weight: bold; color: var(--color-header-gold); font-size: 0.95rem;">
+        ⏰ Lead Time: Please order at least 2 days in advance of your pickup date.
+      </p>
+    </section>
 
     <!-- Food Trays Listings -->
     <section class="menu-section">
@@ -154,13 +165,13 @@
     <!-- Pickup & Ordering Process Placeholders (Respecting blank placeholders directive) -->
     <section class="content-grid" style="grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center;">
       <div>
-        <h2 class="menu-section-title">How to Place Your Order</h2>
-        <p style="margin-bottom: 16px;">We make ordering party food trays simple and convenient: </p>
-        <ol style="margin-bottom: 24px; padding-left: 20px;">
-          <li style="margin-bottom: 10px;"><strong>Choose your trays:</strong> Browse the offerings above and note the sizes (Medium or Large).</li>
-          <li style="margin-bottom: 10px;"><strong>Call or message us:</strong> Reach us at least 2 days in advance via phone or social media.</li>
-          <li style="margin-bottom: 10px;"><strong>Settle payment:</strong> Confirm booking details and secure payment via bank transfer or GCash.</li>
-          <li style="margin-bottom: 10px;"><strong>Pickup at restaurant:</strong> Drive by our Mother Ignacia branch at your scheduled time. Your trays will be hot and sealed in boxes.</li>
+        <h2 class="menu-section-title">How to Order</h2>
+        <p style="margin-bottom: 16px; line-height: 1.6;">Follow these quick steps to order food trays:</p>
+        <ol style="margin-bottom: 24px; padding-left: 20px; line-height: 1.7;">
+          <li style="margin-bottom: 8px;"><strong>Choose items:</strong> Select your trays and sizes (Medium or Large).</li>
+          <li style="margin-bottom: 8px;"><strong>Submit request:</strong> Contact us at least 2 days in advance.</li>
+          <li style="margin-bottom: 8px;"><strong>Confirm payment:</strong> Secure your booking via GCash or bank transfer.</li>
+          <li style="margin-bottom: 8px;"><strong>Pickup:</strong> Collect your hot, boxed trays at our Mother Ignacia branch.</li>
         </ol>
         <div style="display: flex; gap: 24px;">
           <a href="../contact.html?type=party" class="btn btn-primary">Inquire Online</a>
@@ -168,9 +179,7 @@
         </div>
       </div>
 
-      <div class="bezel-wrapper" style="width: 100%; height: 100%;">
-        <div class="image-placeholder" id="partyTrayPackagingPlaceholder" style="min-height: 300px; background-color: #FFBF80;"></div>
-      </div>
+      <div class="image-placeholder" id="partyTrayPackagingPlaceholder" style="min-height: 300px; background-color: #FFBF80; border-radius: var(--radius-lg); width: 100%; height: 100%;"></div>
     </section>
   </main>
 
@@ -208,6 +217,11 @@
           <a href="https://instagram.com" target="_blank" rel="noopener" class="text-gold" aria-label="Instagram" style="display: flex; align-items: center;">
             <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="text-gold" aria-label="TikTok" style="display: flex; align-items: center;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.97 1.22 2.34 2.12 3.86 2.57v3.83c-1.84-.04-3.61-.69-5.06-1.83a8.914 8.914 0 0 1-1.3-1.29v8.94c.05 1.89-.52 3.75-1.63 5.25A9.458 9.458 0 0 1 4.28 20.4c-1.72-1.37-2.73-3.48-2.71-5.69.02-2.2 1.05-4.29 2.78-5.64 1.83-1.42 4.2-1.92 6.42-1.34v3.9c-1.1-.35-2.29-.19-3.26.43a4.793 4.793 0 0 0-1.93 3.86c.01 1.4.67 2.73 1.8 3.56a4.896 4.896 0 0 0 5.97-.24c1.02-.91 1.56-2.25 1.48-3.62V0h-.02z"/>
             </svg>
           </a>
         </p>

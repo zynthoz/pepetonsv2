@@ -15,7 +15,7 @@
 <body>
 
   <!-- Top Sticky Header -->
-  <header>
+  <header class="header-overlay">
     <div class="nav-container">
       <a href="index.html" class="nav-logo" id="headerLogoLink">
         <img src="assets/logo.png" alt="Pepeton's Logo">
@@ -40,115 +40,121 @@
     </div>
   </header>
 
-  <!-- Page Content -->
-  <main>
-    <section style="text-align: center; margin-bottom: 48px;">
+  <!-- Hero Header Banner -->
+  <section class="hero hero-subpage" style="background-image: url('assets/hero_food.png');">
+    <!-- Hero Vignette/Overlay for legibility -->
+    <div class="hero-overlay" style="background: linear-gradient(to right, rgba(12, 10, 9, 0.8) 0%, rgba(12, 10, 9, 0.5) 50%, rgba(12, 10, 9, 0.8) 100%);"></div>
+    
+    <div class="hero-content" style="margin-left: 0; text-align: center; max-width: 800px; padding: 0 var(--space-lg);">
       <span class="text-gold text-uppercase-label">Get In Touch</span>
-      <h1 style="font-size: 3rem; margin-top: 8px;">Contact Us & Inquiries</h1>
-      <p style="font-family: var(--font-display); font-size: 1.25rem; max-width: 600px; margin: 16px auto 0; color: var(--color-body-cream);">
-        Planning an event or reserving a table? Send us a message and our team will assist you.
+      <h1 style="font-size: clamp(2.2rem, 5vw, 3.5rem); margin-top: 8px; color: #FFFFFF; line-height: 1.15;">Contact Us & Inquiries</h1>
+      <p class="hero-tagline" style="margin-bottom: 0; font-size: 1.15rem; color: var(--color-body-cream);">
+        Planning an event or reserving a table? Contact us to secure your booking.
       </p>
-    </section>
+    </div>
+
+    <!-- Organic Wave Separator -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 40px; transform: rotateY(180deg);">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V30.25C1123.29,66.36,1059.08,98.7,985.66,92.83Z" fill="var(--color-bg-dark)"></path>
+      </svg>
+    </div>
+  </section>
+
+  <main>
 
     <!-- Main Contact Grid -->
     <section class="contact-container">
       
       <!-- Contact Info & Details -->
-      <div class="bezel-wrapper">
-        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 32px; border: none;">
-          <div>
-            <h2 class="menu-section-title" style="margin-top: 0;">Visit or Call Us</h2>
-            
-            <div style="margin-bottom: 32px; display: flex; flex-direction: column; gap: 24px;">
-              <div>
-                <strong class="text-gold text-uppercase-label" style="display: block; margin-bottom: 4px;">Restaurant Address</strong>
-                <p style="font-size: 1.1rem; line-height: 1.5;">
-                  109 Mother Ignacia Ave, Diliman,<br>
-                  Quezon City, Metro Manila, Philippines
-                </p>
-              </div>
+      <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 32px;">
+        <div>
+          <h2 class="menu-section-title" style="margin-top: 0;">Get in Touch</h2>
+          
+          <div style="margin-bottom: 32px; display: flex; flex-direction: column; gap: 24px;">
+            <div>
+              <strong class="text-gold text-uppercase-label" style="display: block; margin-bottom: 4px;">Address</strong>
+              <p style="font-size: 1.1rem; line-height: 1.4;">
+                109 Mother Ignacia Ave, Diliman, Quezon City
+              </p>
+            </div>
 
-              <div>
-                <strong class="text-gold text-uppercase-label" style="display: block; margin-bottom: 4px;">Operating Hours</strong>
-                <p style="font-size: 1.1rem;">10:00 AM - 10:00 PM Daily</p>
-                <p style="font-size: 0.85rem; opacity: 0.8;">(Last order for kitchen at 9:30 PM)</p>
-              </div>
+            <div>
+              <strong class="text-gold text-uppercase-label" style="display: block; margin-bottom: 4px;">Hours</strong>
+              <p style="font-size: 1.1rem;">10:00 AM - 10:00 PM Daily (Last order 9:30 PM)</p>
+            </div>
 
-              <div>
-                <strong class="text-gold text-uppercase-label" style="display: block; margin-bottom: 4px;">Contact Numbers</strong>
-                <p style="font-size: 1.25rem; font-weight: bold; margin-bottom: 4px;">
-                  Landline: <a href="tel:+63289262525" class="text-gold" style="border-bottom: 1px dashed var(--color-header-gold);">+63 2 8926 2525</a>
-                </p>
-                <p style="font-size: 1.1rem;">
-                  Mobile: <a href="tel:+639178926252" class="text-gold" style="border-bottom: 1px dashed var(--color-header-gold);">+63 917 892 6252</a>
-                </p>
-              </div>
+            <div>
+              <strong class="text-gold text-uppercase-label" style="display: block; margin-bottom: 4px;">Phone</strong>
+              <p style="font-size: 1.15rem; font-weight: bold; margin-bottom: 4px;">
+                Landline: <a href="tel:+63289262525" class="text-gold" style="border-bottom: 1px dashed var(--color-header-gold);">+63 2 8926 2525</a>
+              </p>
+              <p style="font-size: 1.1rem;">
+                Mobile: <a href="tel:+639178926252" class="text-gold" style="border-bottom: 1px dashed var(--color-header-gold);">+63 917 892 6252</a>
+              </p>
+            </div>
 
-              <div>
-                <strong class="text-gold text-uppercase-label" style="display: block; margin-bottom: 4px;">Email Support</strong>
-                <p style="font-size: 1.1rem;"><a href="mailto:info@pepetonsgrill.com">info@pepetonsgrill.com</a></p>
-              </div>
+            <div>
+              <strong class="text-gold text-uppercase-label" style="display: block; margin-bottom: 4px;">Email</strong>
+              <p style="font-size: 1.1rem;"><a href="mailto:info@pepetonsgrill.com">info@pepetonsgrill.com</a></p>
             </div>
           </div>
+        </div>
 
-          <!-- Location Google Map (Iframe placeholder using blank styling to fit dark mode) -->
-          <div class="map-responsive">
-            <!-- A beautiful dark map placeholder since we are avoiding API keys and blank photos -->
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.2799341774395!2d121.03154817584617!3d14.639999976135892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b70743f07aab%3A0xe51de5171788730b!2sPepeton&#39;s%20Grill!5e0!3m2!1sen!2sph!4v1718300000000!5m2!1sen!2sph" 
-              width="600" 
-              height="450" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
+        <!-- Location Google Map (Iframe) -->
+        <div class="map-responsive">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.2799341774395!2d121.03154817584617!3d14.639999976135892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b70743f07aab%3A0xe51de5171788730b!2sPepeton&#39;s%20Grill!5e0!3m2!1sen!2sph!4v1718300000000!5m2!1sen!2sph" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
 
       <!-- Contact Inquiry Form -->
-      <div class="bezel-wrapper">
-        <div class="card" style="margin-bottom: 0; height: 100%;">
-          <h2 class="menu-section-title" style="margin-top: 0;">Send An Inquiry</h2>
-          <div id="formStatus"></div>
-          
-          <form id="inquiryForm">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
-            </div>
+      <div class="card" style="margin-bottom: 0; height: 100%; padding: 32px;">
+        <h2 class="menu-section-title" style="margin-top: 0;">Send An Inquiry</h2>
+        <div id="formStatus"></div>
+        
+        <form id="inquiryForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+          </div>
 
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
-            </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
+          </div>
 
-            <div class="form-group">
-              <label for="phone">Phone / Mobile Number</label>
-              <input type="tel" id="phone" class="form-control" placeholder="e.g. 0917 123 4567" required>
-            </div>
+          <div class="form-group">
+            <label for="phone">Phone / Mobile Number</label>
+            <input type="tel" id="phone" class="form-control" placeholder="e.g. 0917 123 4567" required>
+          </div>
 
-            <div class="form-group">
-              <label for="inquiryType">Type of Inquiry</label>
-              <select id="inquiryType" class="form-control" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="dinein">Dine-in / Table Reservation</option>
-                <option value="catering">Event Catering Packages</option>
-                <option value="banquet">Banquet Hall Venue Booking</option>
-                <option value="party">Party Food To Go Trays</option>
-                <option value="other">Other Inquiry / Feedback</option>
-              </select>
-            </div>
+          <div class="form-group">
+            <label for="inquiryType">Type of Inquiry</label>
+            <select id="inquiryType" class="form-control" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="dinein">Dine-in / Table Reservation</option>
+              <option value="catering">Event Catering Packages</option>
+              <option value="banquet">Banquet Hall Venue Booking</option>
+              <option value="party">Party Food To Go Trays</option>
+              <option value="other">Other Inquiry / Feedback</option>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" class="form-control" rows="5" placeholder="Specify event date, number of guests, or special requests..." required></textarea>
-            </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" class="form-control" rows="5" placeholder="Specify event date, number of guests, or special requests..." required></textarea>
+          </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
-          </form>
-        </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+        </form>
       </div>
 
     </section>
@@ -188,6 +194,11 @@
           <a href="https://instagram.com" target="_blank" rel="noopener" class="text-gold" aria-label="Instagram" style="display: flex; align-items: center;">
             <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="text-gold" aria-label="TikTok" style="display: flex; align-items: center;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.97 1.22 2.34 2.12 3.86 2.57v3.83c-1.84-.04-3.61-.69-5.06-1.83a8.914 8.914 0 0 1-1.3-1.29v8.94c.05 1.89-.52 3.75-1.63 5.25A9.458 9.458 0 0 1 4.28 20.4c-1.72-1.37-2.73-3.48-2.71-5.69.02-2.2 1.05-4.29 2.78-5.64 1.83-1.42 4.2-1.92 6.42-1.34v3.9c-1.1-.35-2.29-.19-3.26.43a4.793 4.793 0 0 0-1.93 3.86c.01 1.4.67 2.73 1.8 3.56a4.896 4.896 0 0 0 5.97-.24c1.02-.91 1.56-2.25 1.48-3.62V0h-.02z"/>
             </svg>
           </a>
         </p>

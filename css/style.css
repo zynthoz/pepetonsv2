@@ -1,17 +1,28 @@
 /* Core Design Tokens */
 :root {
   /* Colors */
-  --color-bg-dark: #1C1917; /* Soft warm-charcoal canvas (reduces eye strain/glare) */
-  --color-maroon-bg: #2A2421; /* Warm dark-brown container background */
-  --color-brown-mid: #5A514B; /* Accessible midtone border */
-  --color-header-gold: #F48E4F; /* Light vibrant brand orange (passes 4.5:1 on dark) */
-  --color-header-gold-dark-bg: #F48E4F; /* Unified orange for dark mode */
-  --color-body-cream: #E5E0D8; /* Soft warm-cream readable text */
-  --color-price-white: #F5F1E9; /* Soft warm-white for headings (prevents stark halation) */
-  --color-section-red: #44B0C0; /* Light brand teal-blue (passes 4.5:1 on dark) */
-  --color-warm-orange: #FF9E60; /* Brighter orange for hover states */
-  --color-heart-accent: #D67080; /* Muted Logo Pig Pink */
-  --color-divider-brown: #3D3530; /* Softer divider line */
+  --color-bg-dark: #1C1917;
+  /* Soft warm-charcoal canvas (reduces eye strain/glare) */
+  --color-maroon-bg: #2A2421;
+  /* Warm dark-brown container background */
+  --color-brown-mid: #5A514B;
+  /* Accessible midtone border */
+  --color-header-gold: #F48E4F;
+  /* Light vibrant brand orange (passes 4.5:1 on dark) */
+  --color-header-gold-dark-bg: #F48E4F;
+  /* Unified orange for dark mode */
+  --color-body-cream: #E5E0D8;
+  /* Soft warm-cream readable text */
+  --color-price-white: #F5F1E9;
+  /* Soft warm-white for headings (prevents stark halation) */
+  --color-section-red: #44B0C0;
+  /* Light brand teal-blue (passes 4.5:1 on dark) */
+  --color-warm-orange: #FF9E60;
+  /* Brighter orange for hover states */
+  --color-heart-accent: #D67080;
+  /* Muted Logo Pig Pink */
+  --color-divider-brown: #3D3530;
+  /* Softer divider line */
 
   /* Spacing Scale (4pt base) */
   --space-xs: 4px;
@@ -56,19 +67,27 @@ body {
 }
 
 /* Typography Utility Classes */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
-  font-weight: 600; /* Semi-bold, friendly, and fun for a family grill vibe */
+  font-weight: 600;
+  /* Semi-bold, friendly, and fun for a family grill vibe */
   color: var(--color-price-white);
   text-wrap: balance;
-  letter-spacing: -0.01em; /* Friendly, round spacing */
+  letter-spacing: -0.01em;
+  /* Friendly, round spacing */
   line-height: 1.25;
 }
 
 .text-price {
   color: var(--color-price-white);
   font-family: var(--font-display);
-  font-weight: 600; /* Semi-bold for prices */
+  font-weight: 600;
+  /* Semi-bold for prices */
 }
 
 .text-gold {
@@ -82,16 +101,19 @@ h1, h2, h3, h4, h5, h6 {
 .text-uppercase-label {
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.12em; /* Open tracking for small uppercase labels */
+  letter-spacing: 0.12em;
+  /* Open tracking for small uppercase labels */
   text-transform: uppercase;
 }
 
 .slogan-badge {
   font-family: 'Pacifico', 'Dancing Script', 'Satisfy', 'Yellowtail', cursive;
   font-size: 1.5rem;
-  font-weight: 400; /* Use default imported weight (regular 400) to avoid faux-bold synthesis */
+  font-weight: 400;
+  /* Use default imported weight (regular 400) to avoid faux-bold synthesis */
   color: #FFFFFF;
-  background-color: #D96B27; /* Vibrant warm terracotta orange (#D96B27) from user request. Passes WCAG AA large text contrast (3.43:1 > 3.0:1) */
+  background-color: #D96B27;
+  /* Vibrant warm terracotta orange (#D96B27) from user request. Passes WCAG AA large text contrast (3.43:1 > 3.0:1) */
   padding: 6px 18px 8px;
   border-radius: 6px;
   display: inline-block;
@@ -100,8 +122,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-transform: none;
   letter-spacing: normal;
-  -webkit-text-stroke: 0.1px #FFFFFF; /* Extremely fine outline for crisp rendering without thickening */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Subtly enhances text legibility on the lighter orange */
+  -webkit-text-stroke: 0.1px #FFFFFF;
+  /* Extremely fine outline for crisp rendering without thickening */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  /* Subtly enhances text legibility on the lighter orange */
 }
 
 a {
@@ -111,10 +135,10 @@ a {
 }
 
 /* Keyboard Accessible Focus States */
-a:focus-visible, 
-button:focus-visible, 
-input:focus-visible, 
-select:focus-visible, 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
 textarea:focus-visible {
   outline: 2px solid var(--color-header-gold);
   outline-offset: 4px;
@@ -160,7 +184,8 @@ header {
 }
 
 .nav-logo img {
-  height: 44px; /* Slightly smaller to fit inside the padded badge */
+  height: 44px;
+  /* Slightly smaller to fit inside the padded badge */
   width: auto;
   display: block;
 }
@@ -247,10 +272,12 @@ footer {
   bottom: 0;
   width: 40px;
   height: 2px;
-  background-color: var(--color-section-red); /* Balanced teal-blue accent underline */
+  background-color: var(--color-section-red);
+  /* Balanced teal-blue accent underline */
 }
 
-.footer-col p, .footer-col ul {
+.footer-col p,
+.footer-col ul {
   color: var(--color-body-cream);
   margin-bottom: var(--space-sm);
 }
@@ -264,7 +291,8 @@ footer {
 }
 
 .footer-col ul li a:hover {
-  color: var(--color-section-red); /* Teal-blue hover state */
+  color: var(--color-section-red);
+  /* Teal-blue hover state */
 }
 
 /* Override gold accents in the footer to use the brand's teal-blue color for balanced accent weight */
@@ -292,7 +320,8 @@ footer .text-gold {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 14px 32px;
-  border-radius: 50px; /* Fully rounded pill per high-end design */
+  border-radius: 50px;
+  /* Fully rounded pill per high-end design */
   cursor: pointer;
   text-align: center;
   transition: all 0.4s var(--motion-ease-standard);
@@ -305,7 +334,8 @@ footer .text-gold {
 }
 
 .btn-primary:hover {
-  background-color: #5CC3D2; /* Brighter teal for hover state */
+  background-color: #5CC3D2;
+  /* Brighter teal for hover state */
   transform: scale(1.02);
 }
 
@@ -371,7 +401,8 @@ footer .text-gold {
   position: relative;
   z-index: 4;
   max-width: 650px;
-  margin-left: 48px; /* Offset for floating social bar */
+  margin-left: 48px;
+  /* Offset for floating social bar */
 }
 
 .hero-content h1 {
@@ -449,7 +480,7 @@ footer .text-gold {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background: linear-gradient(to right, rgba(12, 10, 9, 0.85) 0%, rgba(12, 10, 9, 0.45) 50%, rgba(12, 10, 9, 0.05) 100%);
+  background: linear-gradient(to right, #000000 0%, #000000 20%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0) 100%);
 }
 
 .hero-social-bar {
@@ -497,7 +528,7 @@ footer .text-gold {
   overflow: hidden;
   border: 2px solid rgba(244, 142, 79, 0.3);
   transform: rotate(-2.5deg);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
   animation: floatAnimation 6s ease-in-out infinite alternate;
   transition: transform 0.5s var(--motion-ease-standard);
 }
@@ -517,6 +548,7 @@ footer .text-gold {
   0% {
     transform: translateY(0) rotate(-2.5deg);
   }
+
   100% {
     transform: translateY(-12px) rotate(-1.5deg);
   }
@@ -538,6 +570,17 @@ footer .text-gold {
 
 #homeBento {
   padding-top: var(--space-xl);
+}
+
+.hero-subpage {
+  height: 45vh !important;
+  min-height: 320px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Cards & Layouts */
@@ -811,12 +854,15 @@ select.form-control {
   .nav-container {
     padding: var(--space-md) var(--space-md);
   }
+
   .nav-logo img {
     height: 38px;
   }
+
   .nav-links {
     gap: 12px;
   }
+
   .nav-links a {
     font-size: 0.85rem;
   }
@@ -824,7 +870,8 @@ select.form-control {
 
 @media (max-width: 1024px) {
   .nav-links {
-    display: none; /* Collapses on mobile */
+    display: none;
+    /* Collapses on mobile */
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -857,7 +904,7 @@ select.form-control {
     justify-content: center;
     gap: var(--space-lg);
   }
-  
+
   .hero-content {
     margin-left: 0;
     max-width: 100%;
@@ -865,11 +912,11 @@ select.form-control {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .hero-actions {
     justify-content: center;
   }
-  
+
   .hero-operating-info {
     justify-content: center;
   }
@@ -906,13 +953,19 @@ select.form-control {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
   }
+
+  .hero-subpage {
+    height: auto !important;
+    min-height: 280px !important;
+    padding: 100px 24px 40px !important;
+  }
 }
 
 @media (max-width: 768px) {
   .menu-grid {
     grid-template-columns: 1fr;
   }
-  
+
   main {
     padding: var(--space-lg) var(--space-md);
   }
@@ -955,20 +1008,20 @@ select.form-control {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .bento-col-2 {
     grid-column: span 1;
   }
-  
+
   .bento-row-2 {
     grid-row: span 1;
   }
-  
+
   .bento-flex-mobile {
     flex-direction: column !important;
   }
-  
-  .bento-flex-mobile > div {
+
+  .bento-flex-mobile>div {
     width: 100% !important;
   }
 
@@ -1030,11 +1083,11 @@ select.form-control {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
+
   .venue-highlight-item {
     padding: 0;
   }
-  
+
   .venue-highlight-item:not(:last-child) {
     border-right: none;
     border-bottom: 1px solid var(--color-divider-brown);
