@@ -1,18 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Transparent-to-Solid Header Fade on Scroll
-  const header = document.querySelector('.header-overlay');
-  if (header) {
-    const handleScroll = () => {
-      if (window.scrollY > 15) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check on load
-  }
-
   // Hero Fade-in Effect on Mouse Move
   const heroSection = document.getElementById('homeHero');
   const heroContent = document.querySelector('.hero-content');
