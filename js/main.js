@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Hero Fade-in Effect on Mouse Move
+  const heroSection = document.getElementById('homeHero');
+  const heroContent = document.querySelector('.hero-content');
+  if (heroSection && heroContent) {
+    const triggerFadeIn = () => {
+      heroContent.classList.add('fade-in');
+      const overlay = heroSection.querySelector('.hero-overlay');
+      if (overlay) overlay.classList.add('fade-in');
+      heroSection.removeEventListener('mousemove', triggerFadeIn);
+      heroSection.removeEventListener('touchstart', triggerFadeIn);
+    };
+    heroSection.addEventListener('mousemove', triggerFadeIn);
+    heroSection.addEventListener('touchstart', triggerFadeIn);
+  }
+
   // Mobile Navigation Hamburger Toggle
   const mobileNavToggle = document.getElementById('mobileNavToggle');
   const navLinks = document.getElementById('navLinks');
@@ -109,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slides[currentSlide].classList.remove('active');
       currentSlide = (currentSlide + 1) % slides.length;
       slides[currentSlide].classList.add('active');
-    }, 5000);
+    }, 3000);
   }
 
   // Sound Mute/Unmute Toggle
@@ -138,5 +153,123 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
+  }
+
+  // Specialty Dish Modal Dynamic Preview
+  const specialtyCards = document.querySelectorAll('.menu-item.specialty, [data-specialty="true"]');
+  if (specialtyCards.length > 0) {
+    // Create modal element dynamically
+    const modal = document.createElement('div');
+    modal.id = 'specialtyModal';
+    modal.className = 'specialty-modal';
+    modal.innerHTML = `
+      <div class="specialty-modal-content">
+        <button class="specialty-modal-close" aria-label="Close modal">&times;</button>
+        <div class="specialty-modal-body">
+          <div class="specialty-modal-img-container">
+            <div class="specialty-modal-img image-placeholder"></div>
+          </div>
+          <div class="specialty-modal-info">
+            <span class="specialty-modal-badge">Specialty</span>
+            <h2 class="specialty-modal-name"></h2>
+            <p class="specialty-modal-price"></p>
+            <p class="specialty-modal-desc"></p>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    const modalImgContainer = modal.querySelector('.specialty-modal-img-container');
+    const modalName = modal.querySelector('.specialty-modal-name');
+    const modalPrice = modal.querySelector('.specialty-modal-price');
+    const modalDesc = modal.querySelector('.specialty-modal-desc');
+    const closeBtn = modal.querySelector('.specialty-modal-close');
+
+    specialtyCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Do not open modal if user clicked on a link or button (like order buttons or CTAs)
+        if (e.target.closest('a') || e.target.closest('button')) return;
+
+        const imgEl = card.querySelector('.menu-item-img img, .menu-item-img .image-placeholder, .image-placeholder');
+        const nameEl = card.querySelector('.menu-item-name');
+        const priceEl = card.querySelector('.menu-item-price');
+        const descEl = card.querySelector('.menu-item-desc');
+
+        if (imgEl) {
+          modalImgContainer.innerHTML = '';
+          const clonedImg = imgEl.cloneNode(true);
+          clonedImg.style.transform = 'none';
+          clonedImg.style.transition = 'none';
+          modalImgContainer.appendChild(clonedImg);
+        }
+
+        if (nameEl) {
+          // Strip any badges or tags from name text
+          const text = Array.from(nameEl.childNodes)
+            .filter(node => node.nodeType === Node.TEXT_NODE)
+            .map(node => node.textContent.trim())
+            .join(' ');
+          modalName.textContent = text;
+        }
+
+        if (priceEl) modalPrice.textContent = priceEl.textContent;
+        if (descEl) modalDesc.textContent = descEl.textContent;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // Auto-filter based on URL query parameter ?filter=name
+  const urlParams = new URLSearchParams(window.location.search);
+  const filterParam = urlParams.get('filter');
+  if (filterParam) {
+    const targetBtn = document.querySelector(`.menu-tab-btn[data-filter="${filterParam}"]`);
+    if (targetBtn) {
+      targetBtn.click();
+      const section = document.getElementById(filterParam);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+
+  // Scroll Reveal Observer
+  const revealElements = document.querySelectorAll('.scroll-reveal');
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
   }
 });

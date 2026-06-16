@@ -29,11 +29,9 @@
 
       <ul class="nav-links" id="navLinks">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="../our-story.html">Our Story</a></li>
         <li><a href="restaurant.html" class="active">Restaurant Menu</a></li>
         <li><a href="catering.html">Catering Menu</a></li>
         <li><a href="party-food.html">Party Food</a></li>
-        <li><a href="../kapalmuks.html">Kapalmuks</a></li>
         <li><a href="../banquet.html">Banquet</a></li>
         <li><a href="../contact.html">Contact Us</a></li>
       </ul>
@@ -61,12 +59,13 @@
     </div>
   </section>
 
-  <main>
+  <main class="full-width-menu-main">
     <div class="menu-layout-wrapper">
       <!-- Menu Filtering Tabs -->
       <aside class="menu-sidebar">
         <div class="menu-tabs">
           <button class="menu-tab-btn active" data-filter="all">All Items</button>
+          <button class="menu-tab-btn" data-filter="kapalmuks">Kapalmuks</button>
           <button class="menu-tab-btn" data-filter="starters">Grills & Starters</button>
           <button class="menu-tab-btn" data-filter="soups">Soups & Vegetables</button>
           <button class="menu-tab-btn" data-filter="rice-noodles">Rice & Noodles</button>
@@ -77,12 +76,13 @@
       <!-- Menu Items Showcase -->
       <div id="menuContainer">
       
-      <!-- Category: Grills & Starters (Pampaganang Pinoy) -->
-      <div class="menu-section" id="starters">
-        <h2 class="menu-section-title">Pampaganang Pinoy & Grills</h2>
+      <!-- Category: Kapalmuks -->
+      <div class="menu-section" id="kapalmuks">
+        <h2 class="menu-section-title">Kapalmuks Specialty</h2>
+        <p style="margin-bottom: 24px; opacity: 0.9;">Pepeton's legendary crispy pork face platter that put us on the map. Served with native spiced vinegar dip.</p>
         <div class="menu-grid">
-          
-          <div class="menu-item">
+          <div class="menu-item specialty scroll-reveal" data-specialty="true">
+            <span class="specialty-badge">Specialty</span>
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #D96B27;"></div>
             </div>
@@ -91,11 +91,19 @@
                 <h3 class="menu-item-name">The Famous Kapalmuks <span class="signature-tag">Signature</span></h3>
                 <span class="menu-item-price">₱650.00</span>
               </div>
-              <p class="menu-item-desc">Deep-fried pig's head prepared through our secret slow-boiled method. Blistered crispy skin and tender meat. Serves 3-4.</p>
+              <p class="menu-item-desc">Deep-fried pig's head prepared through our secret slow-boiled method for blistered crispy skin and tender meat. Serves 3-4.</p>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="menu-item">
+      <!-- Category: Grills & Starters (Pampaganang Pinoy) -->
+      <div class="menu-section" id="starters">
+        <h2 class="menu-section-title">Pampaganang Pinoy & Grills</h2>
+        <div class="menu-grid">
+          
+          <div class="menu-item specialty scroll-reveal" data-specialty="true">
+            <span class="specialty-badge">Specialty</span>
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #BC4E15;"></div>
             </div>
@@ -108,7 +116,8 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item specialty scroll-reveal" data-specialty="true">
+            <span class="specialty-badge">Specialty</span>
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #A03B0D;"></div>
             </div>
@@ -121,7 +130,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #E27B35;"></div>
             </div>
@@ -134,7 +143,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #C65A1E;"></div>
             </div>
@@ -147,7 +156,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #B54D12;"></div>
             </div>
@@ -168,7 +177,7 @@
         <h2 class="menu-section-title">Soups & Vegetables</h2>
         <div class="menu-grid">
           
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #388E9C;"></div>
             </div>
@@ -181,7 +190,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #4AA6B5;"></div>
             </div>
@@ -194,7 +203,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #327F8C;"></div>
             </div>
@@ -207,7 +216,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #55B5C4;"></div>
             </div>
@@ -220,7 +229,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #2F727E;"></div>
             </div>
@@ -233,7 +242,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #64C2CF;"></div>
             </div>
@@ -254,7 +263,7 @@
         <h2 class="menu-section-title">Rice & Noodles</h2>
         <div class="menu-grid">
           
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #E6AD5C;"></div>
             </div>
@@ -267,7 +276,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #C89547;"></div>
             </div>
@@ -280,7 +289,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #DDA046;"></div>
             </div>
@@ -293,7 +302,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #B48133;"></div>
             </div>
@@ -314,7 +323,7 @@
         <h2 class="menu-section-title">Desserts</h2>
         <div class="menu-grid">
           
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #D67080;"></div>
             </div>
@@ -327,7 +336,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #E28896;"></div>
             </div>
@@ -340,7 +349,7 @@
             </div>
           </div>
 
-          <div class="menu-item">
+          <div class="menu-item scroll-reveal">
             <div class="menu-item-img">
               <div class="image-placeholder" style="background-color: #BD5969;"></div>
             </div>
@@ -381,7 +390,6 @@
         <h3 class="text-gold">Quick Links</h3>
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../our-story.html">Our Story</a></li>
           <li><a href="restaurant.html">Restaurant Menu</a></li>
           <li><a href="catering.html">Catering & Banquet</a></li>
           <li><a href="../contact.html">Contact Us</a></li>

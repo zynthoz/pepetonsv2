@@ -31,11 +31,9 @@
 
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="our-story.html">Our Story</a></li>
         <li><a href="menu/restaurant.html">Restaurant Menu</a></li>
         <li><a href="menu/catering.html">Catering Menu</a></li>
         <li><a href="menu/party-food.html">Party Food</a></li>
-        <li><a href="kapalmuks.html">Kapalmuks</a></li>
         <li><a href="banquet.html">Banquet</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
@@ -101,7 +99,7 @@
       </div>
          <div class="bento-grid">
         <!-- Bento Cell 1: Spotlight on the famous Kapalmuks (spans 2 cols on desktop) -->
-        <div class="card bento-col-2 bento-flex-mobile" style="flex-direction: row; gap: 32px; padding: 32px; display: flex;">
+        <div class="card bento-col-2 bento-flex-mobile scroll-reveal" style="flex-direction: row; gap: 32px; padding: 32px; display: flex;">
           <div class="image-placeholder" style="width: 50%; min-height: 280px; background-color: #FFA64D;"></div>
           <div style="width: 50%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
             <span class="text-gold text-uppercase-label" style="font-size: 0.75rem;">Signature Masterpiece</span>
@@ -109,12 +107,12 @@
             <p style="font-size: 0.95rem; margin-bottom: 24px; color: var(--color-body-cream); line-height: 1.5;">
               The legendary crispy pork face platter that put us on the map. Blistered crisp on the outside, juicy and tender on the inside.
             </p>
-            <a href="kapalmuks.html" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.8rem;">Discover the Secret</a>
+            <a href="menu/restaurant.html?filter=kapalmuks" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.8rem;">Discover the Secret</a>
           </div>
         </div>
 
         <!-- Bento Cell 2: Banquet Hall (spans 1 col wide, but spans 2 rows high) -->
-        <div class="card bento-row-2" style="padding: 32px; display: flex; flex-direction: column; height: 100%;">
+        <div class="card bento-row-2 scroll-reveal" style="padding: 32px; display: flex; flex-direction: column; height: 100%;">
           <div style="display: flex; flex-direction: column; align-items: flex-start;">
             <span class="text-gold text-uppercase-label" style="font-size: 0.75rem;">Private Events</span>
             <h3 style="font-size: 1.5rem; margin: 12px 0; color: var(--color-price-white);">Our Banquet Hall</h3>
@@ -127,7 +125,7 @@
         </div>
 
         <!-- Bento Cell 3: Dine-In Menu (1 col) -->
-        <div class="card" style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card scroll-reveal" style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
           <div style="display: flex; flex-direction: column; align-items: flex-start;">
             <span class="text-gold text-uppercase-label" style="font-size: 0.75rem;">Dine-In Favorites</span>
             <h3 style="font-size: 1.4rem; margin: 12px 0; color: var(--color-price-white);">Dine-In Menu</h3>
@@ -139,7 +137,7 @@
         </div>
 
         <!-- Bento Cell 4: Catering Services (1 col) -->
-        <div class="card" style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div class="card scroll-reveal" style="padding: 32px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
           <div style="display: flex; flex-direction: column; align-items: flex-start;">
             <span class="text-gold text-uppercase-label" style="font-size: 0.75rem;">Buffet Catering</span>
             <h3 style="font-size: 1.4rem; margin: 12px 0; color: var(--color-price-white);">Buffet Services</h3>
@@ -152,12 +150,35 @@
       </div>
     </section>
 
+    <!-- New Our Story Section -->
+    <section id="homeStory" class="card scroll-reveal" style="padding: 48px; margin-bottom: 64px;">
+      <div class="content-grid" style="align-items: center; gap: 48px;">
+        <div>
+          <span class="text-gold text-uppercase-label">Our Heritage</span>
+          <h2 style="font-size: 2.2rem; margin-top: 8px; margin-bottom: 20px;">The Pepeton's Story</h2>
+          <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 16px; opacity: 0.9;">
+            Pepeton's Grill began with a simple vision: to bring families together over honest, exceptionally cooked Filipino comfort food. We cook without shortcuts, slow-braising stews for hours and hand-grilling fresh seafood over hardwood flames.
+          </p>
+          <div style="font-family: 'Yellowtail', cursive; font-size: 2rem; color: var(--color-header-gold); opacity: 0.9; margin-top: 16px;">
+            "Masarap Po Dito!"
+          </div>
+        </div>
+        <div style="border: 1px solid var(--color-brown-mid); padding: 10px; border-radius: 20px; background: rgba(255, 255, 255, 0.02); box-sizing: border-box; width: 100%;">
+          <div class="image-placeholder" style="min-height: 280px; background-color: #D96B27; border-radius: 12px; position: relative;">
+            <div style="position: absolute; bottom: 15px; left: 15px; background: rgba(12, 10, 9, 0.75); padding: 6px 12px; border-radius: 12px; border: 1px solid var(--color-brown-mid); backdrop-filter: blur(8px);">
+              <span style="font-size: 0.7rem; color: var(--color-header-gold); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">Mother Ignacia Ave, QC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Delivery Platforms -->
     <section class="card" id="homeDelivery" style="text-align: center; padding: 32px 24px; margin-bottom: 64px;">
       <h2 style="margin-bottom: 24px; font-size: 1.6rem;">Order Delivery Online</h2>
       
       <div class="content-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; max-width: 600px; margin: 0 auto;">
-        <div class="card" style="padding: 24px; align-items: center; justify-content: center; background-color: var(--color-bg-dark); display: flex; flex-direction: column; gap: 16px; border: 1px solid var(--color-brown-mid);">
+        <div class="card scroll-reveal" style="padding: 24px; align-items: center; justify-content: center; background-color: var(--color-bg-dark); display: flex; flex-direction: column; gap: 16px; border: 1px solid var(--color-brown-mid);">
           <div style="width: 56px; height: 56px; background-color: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px; fill: #00B14F;">
               <title>Grab</title>
@@ -167,7 +188,7 @@
           <a href="https://food.grab.com" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem; width: 100%;">Order GrabFood</a>
         </div>
         
-        <div class="card" style="padding: 24px; align-items: center; justify-content: center; background-color: var(--color-bg-dark); display: flex; flex-direction: column; gap: 16px; border: 1px solid var(--color-brown-mid);">
+        <div class="card scroll-reveal" style="padding: 24px; align-items: center; justify-content: center; background-color: var(--color-bg-dark); display: flex; flex-direction: column; gap: 16px; border: 1px solid var(--color-brown-mid);">
           <div style="width: 56px; height: 56px; background-color: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px; fill: #D70F64;">
               <title>foodpanda</title>
@@ -180,7 +201,7 @@
     </section>
 
     <!-- High-Converting Lead Generation Inquiry Widget -->
-    <section class="card" id="homeQuickInquiry" style="padding: 32px; margin-bottom: 64px;">
+    <section class="card scroll-reveal" id="homeQuickInquiry" style="padding: 32px; margin-bottom: 64px;">
       <div style="text-align: center; max-width: 600px; margin: 0 auto 32px;">
         <span class="text-gold text-uppercase-label">Direct Inquiry Portal</span>
         <h2 style="font-size: 2.2rem; margin-top: 8px; margin-bottom: 12px;">Plan Your Event or Booking</h2>
@@ -228,7 +249,6 @@
         <h3 class="text-gold">Quick Links</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="our-story.html">Our Story</a></li>
           <li><a href="menu/restaurant.html">Restaurant Menu</a></li>
           <li><a href="menu/catering.html">Catering & Banquet</a></li>
           <li><a href="contact.html">Contact Us</a></li>
