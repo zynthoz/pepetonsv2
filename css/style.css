@@ -403,11 +403,14 @@ footer .text-gold {
   max-width: 650px;
   margin-left: 48px;
   /* Offset for floating social bar */
-  opacity: 0;
   transition: opacity 0.8s ease;
 }
 
-.hero-content.fade-in {
+#homeHero .hero-content {
+  opacity: 0;
+}
+
+#homeHero .hero-content.fade-in {
   opacity: 1;
 }
 
@@ -624,7 +627,7 @@ footer .text-gold {
 /* Menus & Lists */
 .menu-layout-wrapper {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 280px minmax(0, 1fr);
   gap: var(--space-xl);
   align-items: flex-start;
   max-width: 1200px;
@@ -933,7 +936,6 @@ select.form-control {
 @media (max-width: 1024px) {
   .nav-links {
     display: none;
-    /* Collapses on mobile */
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -943,6 +945,7 @@ select.form-control {
     border-bottom: 1px solid var(--color-brown-mid);
     padding: var(--space-lg);
     gap: var(--space-md);
+    z-index: 101;
   }
 
   .nav-links.active {
@@ -973,14 +976,33 @@ select.form-control {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+
+  .hero-content > * {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-content > div[style*="inline-flex"] {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
   }
 
   .hero-actions {
     justify-content: center;
   }
 
+  /* Uniform dark overlay instead of directional gradient on mobile */
+  .hero-overlay {
+    background: rgba(12, 10, 9, 0.65) !important;
+  }
+
   .hero-operating-info {
     justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
   }
 
   .hero-social-bar {
@@ -1021,15 +1043,373 @@ select.form-control {
     min-height: 280px !important;
     padding: 100px 24px 40px !important;
   }
+
+  /* Menu grid: 2 columns on tablet */
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+  }
+
+  /* Banquet content grid stack */
+  .content-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+  }
 }
 
 @media (max-width: 768px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
+  /* Global main padding */
   main {
     padding: var(--space-lg) var(--space-md);
+  }
+
+  /* Full-width menu main override */
+  .full-width-menu-main {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: var(--space-lg) !important;
+  }
+
+  /* Menu grid: 2 columns on mobile */
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  /* Make specialty occupy one whole row on mobile */
+  .menu-item.specialty {
+    grid-column: 1 / -1;
+  }
+
+  /* Reduce menu card image height on mobile */
+  .menu-item-img {
+    height: 150px;
+  }
+
+  /* Specialty cards: full width, reduced image */
+  .menu-item.specialty .menu-item-img {
+    height: 220px;
+  }
+
+  /* Menu item content padding */
+  .menu-item-content {
+    padding: 10px;
+  }
+
+  /* Menu item header: stack name and price */
+  .menu-item-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .menu-item-name {
+    font-size: 1rem;
+  }
+
+  .menu-item-price {
+    font-size: 1rem;
+  }
+
+  .menu-item-desc {
+    display: none;
+  }
+
+  .specialty-badge {
+    top: 10px;
+    left: 10px;
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+
+  /* Menu section spacing */
+  .menu-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .menu-section-title {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-md);
+  }
+
+  /* Hero section mobile adjustments */
+  .hero {
+    min-height: 85vh;
+    padding: 100px 16px 48px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.8rem, 7vw, 2.8rem) !important;
+  }
+
+  .hero-tagline {
+    font-size: 1rem !important;
+    margin-bottom: var(--space-lg) !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-operating-info {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .hero-social-bar {
+    gap: 16px;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+
+  .hero-subpage {
+    min-height: 220px !important;
+    padding: 80px 16px 32px !important;
+  }
+
+  .hero-subpage .hero-content h1 {
+    font-size: clamp(1.6rem, 6vw, 2.5rem) !important;
+  }
+
+  .hero-subpage .hero-tagline {
+    font-size: 0.95rem !important;
+  }
+
+  /* Hero floating food image */
+  .hero-floating-food {
+    max-width: 280px;
+    height: 180px;
+  }
+
+  /* Bento grid stacks fully on mobile */
+  .bento-grid {
+    gap: var(--space-md);
+  }
+
+  /* Bento flex cards (like Kapalmuks spotlight) */
+  .bento-flex-mobile {
+    flex-direction: column !important;
+  }
+
+  .bento-flex-mobile > div {
+    width: 100% !important;
+  }
+
+  .bento-flex-mobile .image-placeholder {
+    width: 100% !important;
+    min-height: 200px !important;
+  }
+
+  /* Cards reduce padding */
+  .card {
+    padding: 20px;
+  }
+
+  /* Contact form */
+  .contact-container {
+    gap: var(--space-md);
+  }
+
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+
+  /* Footer on mobile */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  footer {
+    padding: var(--space-xl) var(--space-md) var(--space-md);
+  }
+
+  .footer-col h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Section headings */
+  h2 {
+    font-size: 1.6rem !important;
+  }
+
+  /* Download Menu CTA card */
+  .full-width-menu-main > .card {
+    margin-top: var(--space-lg) !important;
+    padding: 20px !important;
+  }
+
+  /* Package cards on banquet/catering */
+  .package-price {
+    font-size: 1.5rem;
+  }
+
+  /* Slogan badge */
+  .slogan-badge {
+    font-size: 1.2rem;
+    padding: 5px 14px 6px;
+  }
+
+  /* Buttons slight size adjustment */
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.8rem;
+  }
+
+  /* Package card: reset any inline scale on mobile */
+  .package-card {
+    transform: none !important;
+  }
+
+  /* Bezel inner form */
+  .bezel-inner-form {
+    padding: 20px;
+  }
+
+  /* Map section */
+  .map-responsive {
+    padding-bottom: 75%;
+  }
+
+  /* Content grid inline override for banquet page */
+  [style*="grid-template-columns: 1.2fr"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-lg) !important;
+  }
+}
+
+/* Extra small devices (phones in portrait) */
+@media (max-width: 480px) {
+  main {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .full-width-menu-main {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .nav-container {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .nav-logo img {
+    height: 32px;
+  }
+
+  .nav-links {
+    padding: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: var(--space-sm) 0;
+  }
+
+  /* Hero extra small */
+  .hero {
+    min-height: 80vh;
+    padding: 80px 12px 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem !important;
+    margin-bottom: var(--space-md) !important;
+  }
+
+  .hero-tagline {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .hero-floating-food {
+    max-width: 240px;
+    height: 160px;
+  }
+
+  .hero-subpage {
+    min-height: 180px !important;
+    padding: 70px 12px 24px !important;
+  }
+
+  /* Menu items */
+  .menu-item-img {
+    height: 120px;
+  }
+
+  .menu-item.specialty .menu-item-img {
+    height: 180px;
+  }
+
+  .menu-item-name {
+    font-size: 0.85rem;
+  }
+
+  .menu-item-price {
+    font-size: 0.85rem;
+  }
+
+  .menu-item-content {
+    padding: 8px;
+  }
+
+  /* Specialty badge */
+  .specialty-badge {
+    top: 10px;
+    left: 10px;
+    font-size: 0.6rem;
+    padding: 4px 8px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 16px;
+    border-radius: var(--radius-md);
+  }
+
+  /* Bento section header */
+  #homeBento > div:first-child h2 {
+    font-size: 1.4rem !important;
+  }
+
+  /* Footer */
+  .footer-bottom {
+    font-size: 0.75rem;
+  }
+
+  /* Form controls */
+  .form-control {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.75rem;
+  }
+
+  /* Slogan badge */
+  .slogan-badge {
+    font-size: 1rem;
+    padding: 4px 12px 5px;
+  }
+
+  /* Section spacing */
+  section {
+    margin-bottom: var(--space-xl);
+  }
+
+  h2 {
+    font-size: 1.4rem !important;
   }
 }
 
@@ -1155,11 +1535,16 @@ select.form-control {
     border-bottom: 1px solid var(--color-divider-brown);
     padding-bottom: 24px;
   }
+
+  .venue-highlights-container {
+    padding: 24px 16px;
+    margin-bottom: 32px;
+  }
 }
 /* Responsive overrides for Menu Sidebar and Tabs */
 @media (max-width: 1024px) {
   .menu-layout-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-lg);
     padding-bottom: var(--space-xl);
   }
@@ -1169,9 +1554,14 @@ select.form-control {
     top: 0;
     z-index: 90;
     background-color: var(--color-bg-dark);
-    margin: 0 calc(-1 * var(--space-lg));
-    padding: var(--space-sm) var(--space-lg);
+    margin: 0 calc(-1 * var(--space-md));
+    padding: var(--space-sm) var(--space-md);
     border-bottom: 1px solid var(--color-divider-brown);
+    min-width: 0;
+  }
+
+  #menuContainer {
+    min-width: 0;
   }
 
   .menu-sidebar .menu-tabs {
@@ -1183,6 +1573,7 @@ select.form-control {
     padding: 0;
     gap: var(--space-xs);
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
 
   .menu-sidebar .menu-tabs::-webkit-scrollbar {
@@ -1190,12 +1581,15 @@ select.form-control {
   }
 
   .menu-sidebar .menu-tab-btn {
-    padding: var(--space-sm) var(--space-md);
+    padding: 8px 16px;
     border-left: none;
     border-bottom: 3px solid transparent;
     border-radius: 0;
     width: auto;
     text-align: center;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
   }
 
   .menu-sidebar .menu-tab-btn:hover,
@@ -1203,6 +1597,32 @@ select.form-control {
     background: none;
     border-bottom-color: var(--color-header-gold);
     border-left-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-sidebar {
+    margin: 0 -16px !important;
+    padding: var(--space-xs) 16px !important;
+  }
+
+  .menu-sidebar .menu-tab-btn {
+    padding: 6px 12px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-sidebar {
+    margin: 0 -12px !important;
+    padding: var(--space-xs) 12px !important;
+  }
+
+  .menu-sidebar .menu-tab-btn {
+    padding: 5px 8px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
   }
 }
 
@@ -1379,18 +1799,77 @@ select.form-control {
 }
 
 @media (max-width: 768px) {
+  .specialty-modal-content {
+    width: 95%;
+    max-height: 92vh;
+    border-radius: var(--radius-md);
+  }
+
   .specialty-modal-body {
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 24px;
+    gap: 20px;
+    padding: 20px;
   }
   
   .specialty-modal-img-container {
-    min-height: 240px;
+    min-height: 200px;
+    max-height: 280px;
+  }
+
+  .specialty-modal-img-container img,
+  .specialty-modal-img-container .image-placeholder {
+    min-height: 200px;
   }
   
   .specialty-modal-name {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  .specialty-modal-price {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .specialty-modal-desc {
+    font-size: 0.9rem;
+  }
+
+  .specialty-modal-close {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .specialty-modal-content {
+    width: 98%;
+    max-height: 94vh;
+  }
+
+  .specialty-modal-body {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .specialty-modal-img-container {
+    min-height: 160px;
+    max-height: 220px;
+  }
+
+  .specialty-modal-img-container img,
+  .specialty-modal-img-container .image-placeholder {
+    min-height: 160px;
+  }
+
+  .specialty-modal-name {
+    font-size: 1.2rem;
+  }
+
+  .specialty-modal-price {
+    font-size: 1.1rem;
   }
 }
 
@@ -1417,13 +1896,13 @@ select.form-control {
   max-width: 100% !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: var(--space-lg);
 }
 
 @media (max-width: 1024px) {
   .full-width-menu-main .menu-layout-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

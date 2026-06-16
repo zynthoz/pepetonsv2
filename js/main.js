@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileNavToggle && navLinks) {
     mobileNavToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
-      
+
       // Animate hamburger lines
       const spans = mobileNavToggle.querySelectorAll('span');
       if (navLinks.classList.contains('active')) {
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (inquiryForm) {
     inquiryForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       // Get form data
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slides[currentSlide].classList.remove('active');
       currentSlide = (currentSlide + 1) % slides.length;
       slides[currentSlide].classList.add('active');
-    }, 3000);
+    }, 2000);
   }
 
   // Sound Mute/Unmute Toggle
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     soundToggle.addEventListener('click', (e) => {
       e.preventDefault();
       isMuted = !isMuted;
-      
+
       const soundIcon = document.getElementById('soundIcon');
       if (soundIcon) {
         if (isMuted) {
