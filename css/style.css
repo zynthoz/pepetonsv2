@@ -170,12 +170,7 @@ header {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px var(--space-lg);
-  transition: padding 0.3s var(--motion-ease-standard);
-}
-
-.header-overlay.scrolled .nav-container {
-  padding: 14px var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
 }
 
 .nav-logo {
@@ -452,23 +447,13 @@ footer .text-gold {
 
 /* Hero Elements & Animations */
 .header-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent !important;
-  border-bottom: 1px solid transparent !important;
-  box-shadow: none;
+  background: linear-gradient(to bottom, rgba(12, 10, 9, 0.8) 0%, rgba(12, 10, 9, 0) 100%) !important;
+  border-bottom: none !important;
   z-index: 100;
-  transition: background-color 0.4s var(--motion-ease-standard), 
-              border-color 0.4s var(--motion-ease-standard), 
-              box-shadow 0.4s var(--motion-ease-standard);
-}
-
-.header-overlay.scrolled {
-  background: var(--color-maroon-bg) !important;
-  border-bottom: 1px solid var(--color-divider-brown) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
 .hero-slideshow {
@@ -949,14 +934,6 @@ select.form-control {
 }
 
 @media (max-width: 1024px) {
-  .nav-container {
-    padding: 20px var(--space-md);
-  }
-
-  .header-overlay.scrolled .nav-container {
-    padding: 12px var(--space-md) !important;
-  }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -1320,11 +1297,7 @@ select.form-control {
   }
 
   .nav-container {
-    padding: 16px var(--space-md) !important;
-  }
-
-  .header-overlay.scrolled .nav-container {
-    padding: 10px var(--space-md) !important;
+    padding: var(--space-sm) var(--space-md);
   }
 
   .nav-logo img {
@@ -1578,11 +1551,11 @@ select.form-control {
 
   .menu-sidebar {
     position: sticky;
-    top: 60px;
+    top: 0;
     z-index: 90;
     background-color: var(--color-bg-dark);
     margin: 0 calc(-1 * var(--space-md));
-    padding: 16px var(--space-md);
+    padding: var(--space-sm) var(--space-md);
     border-bottom: 1px solid var(--color-divider-brown);
     min-width: 0;
   }
@@ -1593,12 +1566,18 @@ select.form-control {
 
   .menu-sidebar .menu-tabs {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
     border: none;
     background: none;
     padding: 0;
-    gap: 8px var(--space-sm);
+    gap: var(--space-xs);
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu-sidebar .menu-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .menu-sidebar .menu-tab-btn {
@@ -1624,7 +1603,7 @@ select.form-control {
 @media (max-width: 768px) {
   .menu-sidebar {
     margin: 0 -16px !important;
-    padding: 12px 16px !important;
+    padding: var(--space-xs) 16px !important;
   }
 
   .menu-sidebar .menu-tab-btn {
@@ -1636,9 +1615,8 @@ select.form-control {
 
 @media (max-width: 480px) {
   .menu-sidebar {
-    top: 52px;
     margin: 0 -12px !important;
-    padding: 10px 12px !important;
+    padding: var(--space-xs) 12px !important;
   }
 
   .menu-sidebar .menu-tab-btn {
