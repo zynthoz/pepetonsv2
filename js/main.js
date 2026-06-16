@@ -172,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="specialty-modal-info">
             <span class="specialty-modal-badge">Specialty</span>
             <h2 class="specialty-modal-name"></h2>
-            <p class="specialty-modal-price"></p>
             <p class="specialty-modal-desc"></p>
           </div>
         </div>
@@ -182,7 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const modalImgContainer = modal.querySelector('.specialty-modal-img-container');
     const modalName = modal.querySelector('.specialty-modal-name');
-    const modalPrice = modal.querySelector('.specialty-modal-price');
     const modalDesc = modal.querySelector('.specialty-modal-desc');
     const closeBtn = modal.querySelector('.specialty-modal-close');
 
@@ -193,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const imgEl = card.querySelector('.menu-item-img img, .menu-item-img .image-placeholder, .image-placeholder');
         const nameEl = card.querySelector('.menu-item-name');
-        const priceEl = card.querySelector('.menu-item-price');
         const descEl = card.querySelector('.menu-item-desc');
 
         if (imgEl) {
@@ -213,7 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
           modalName.textContent = text;
         }
 
-        if (priceEl) modalPrice.textContent = priceEl.textContent;
         if (descEl) modalDesc.textContent = descEl.textContent;
 
         modal.classList.add('active');
@@ -271,5 +267,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
+  }
+
+  // Sticky header transition on scroll
+  const header = document.querySelector('.header-overlay');
+  if (header) {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Trigger once on load
   }
 });

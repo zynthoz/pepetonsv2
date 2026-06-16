@@ -447,13 +447,22 @@ footer .text-gold {
 
 /* Hero Elements & Animations */
 .header-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(12, 10, 9, 0.8) 0%, rgba(12, 10, 9, 0) 100%) !important;
-  border-bottom: none !important;
+  background: transparent !important;
+  border-bottom: 1px solid transparent !important;
   z-index: 100;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-overlay.scrolled {
+  background: rgba(26, 26, 26, 0.95) !important; /* Premium dark gray background */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
 }
 
 .hero-slideshow {
@@ -1630,10 +1639,33 @@ select.form-control {
 @media (min-width: 769px) {
   .menu-item.specialty {
     grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    height: 480px;
+    align-items: stretch;
   }
   
   .menu-item.specialty .menu-item-img {
-    height: 420px;
+    width: 65%;
+    height: 100%;
+  }
+
+  .menu-item.specialty .menu-item-content {
+    width: 35%;
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-item.specialty .menu-item-name {
+    font-size: 1.95rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .menu-item.specialty .menu-item-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
   }
 }
 
@@ -1642,6 +1674,16 @@ select.form-control {
   box-shadow: 0 8px 30px rgba(244, 142, 79, 0.15);
   position: relative;
   cursor: pointer;
+}
+
+.menu-item.specialty .menu-item-name {
+  font-size: 1.45rem;
+}
+
+.menu-item.specialty .menu-item-desc {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.5;
 }
 
 .menu-item.specialty:hover {
@@ -1921,4 +1963,9 @@ select.form-control {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
+}
+
+/* Hide prices on restaurant menu page */
+.full-width-menu-main .menu-item-price {
+  display: none !important;
 }
